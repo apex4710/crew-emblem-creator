@@ -740,7 +740,8 @@ class emblemHelper {
     let _svgData = btoa(this.svg.getSVG().outerHTML);
     let _layerData = btoa(JSON.stringify(this.layers));
     //  Create the request.
-    let _consoleCode = "// Generated with EmblemHelper v1.1 \n\n";
+    let _consoleCode =
+      "// Generated with EmblemHelper v1.1 modified by APEX4710 \n\n";
     _consoleCode += 'var svgData = "' + _svgData + '";\n\n';
     _consoleCode += 'var layerData = "' + _layerData + '";\n\n';
     _consoleCode +=
