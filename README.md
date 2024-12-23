@@ -52,7 +52,7 @@ For a detailed demonstration, refer to this [YouTube video by Flashback-GTA](htt
 
 ## Acknowledgments
 
-- [Flashback-GTA](https://www.youtube.com/user/FlashbackGTA) for the detailed tutorial video.
+- [Flashback-GTA](https://www.youtube.com/user/FlashbackGTA) for the detailed tutorial video. This tool is not made by me. I just made a copy of it with some minor changes. I do not own the original code. I wanted keep the tool as backup if the original creator decides to remove it.
 
 ---
 
