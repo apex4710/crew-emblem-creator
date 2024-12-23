@@ -117,7 +117,7 @@ class svgObject {
 
   //  Create the SVG element with the standard attributes.
   constructor(shapePath, canvasWidth = 512, canvasHeight = 512) {
-    this.xmlns = "http://www.w3.org/2000/svg";
+    this.xmlns = "https://www.w3.org/TR/SVG"; // Latest Version
     this.canvasWidth = canvasWidth;
     this.canvasHeight = canvasHeight;
     this.svgElement = document.createElementNS(this.xmlns, "svg");
