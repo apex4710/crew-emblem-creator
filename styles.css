@@ -228,37 +228,44 @@ legend {
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-/* Grayed out inactive buttons */
+
+/* Enhanced button styles */
+button {
+  border-radius: 50px; /* More rounded edges */
+  outline: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(135deg, #0078d7, #005f9e); /* Gradient background */
+  padding: 14px 28px; /* Slightly adjusted padding */
+  margin: 10px 0px; /* Adjusted margin for better spacing */
+  transition: all 0.4s ease; /* Smoother transition */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+  backdrop-filter: saturate(180%) blur(10px); /* Slightly more intense backdrop filter */
+  border: 2px solid rgba(255, 255, 255, 0.3); /* Slight border for definition */
+}
+
+button:hover:enabled {
+  background: linear-gradient(135deg, #005f9e, #003f6f); /* Darker gradient on hover */
+  transform: scale(1.05); /* Slight scaling effect */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2), 0 8px 10px rgba(0, 0, 0, 0.3); /* More pronounced shadow */
+}
+
+button:active:enabled {
+  background: linear-gradient(135deg, #003f6f, #002f4f); /* Even darker gradient on active */
+  transform: scale(1); /* Reset scaling */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Reduced shadow */
+}
+
 button:disabled,
 button:disabled:hover {
   color: #aaa;
   background: #444;
-  border: 1px solid #555;
+  border: 2px solid #555;
   box-shadow: none;
   cursor: not-allowed;
 }
 
-button {
-  border-radius: 12px;
-  outline: none;
-  font-size: 18px;
-  font-weight: bold;
-  color: #fff;
-  background: #0078d7;
-  padding: 16px 24px;
-  margin: 8px 0px;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
-}
-button:hover:enabled {
-  background: #005f9e;
-  transform: translateY(-2px);
-}
-button:active:enabled {
-  background: #003f6f;
-  transform: translateY(0);
-}
 .clr-inactive {
   background-color: rgba(204, 204, 204, 0.8);
   color: #333;
@@ -366,35 +373,41 @@ button:active:enabled {
   min-height: 512px;
   position: relative;
 }
-/* Status Button Colors */
+
+/* Enhanced Status Button Colors */
 #eh-btnProcessImage {
-  border-radius: 12px;
+  border-radius: 50px; /* More rounded edges */
   outline: none;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   color: #fff;
-  background: #0078d7;
-  padding: 16px 24px;
-  margin: 8px 0px;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
+  background: linear-gradient(135deg, #0078d7, #005f9e); /* Gradient background */
+  padding: 14px 28px; /* Slightly adjusted padding */
+  margin: 10px 0px; /* Adjusted margin for better spacing */
+  transition: all 0.4s ease; /* Smoother transition */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+  backdrop-filter: saturate(180%) blur(10px); /* Slightly more intense backdrop filter */
+  border: 2px solid rgba(255, 255, 255, 0.3); /* Slight border for definition */
 }
+
 #eh-btnProcessImage.ok {
-  background-color: #4caf50;
+  background: linear-gradient(135deg, #4caf50, #388e3c); /* Gradient for success state */
 }
+
 #eh-btnProcessImage.too-expensive {
-  background-color: #f44336;
+  background: linear-gradient(135deg, #f44336, #d32f2f); /* Gradient for danger state */
 }
+
 /* Inactive Buttons Grayed Out */
 button:disabled,
 button:disabled:hover {
   color: #aaa;
   background: #444;
-  border: 1px solid #555;
+  border: 2px solid #555; /* Consistent border width */
   box-shadow: none;
   cursor: not-allowed;
 }
+
 .div-svg-image {
   position: absolute;
   margin-left: auto;
