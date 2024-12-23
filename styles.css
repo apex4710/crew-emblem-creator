@@ -264,7 +264,7 @@ button:active:enabled {
 }
 .clr-success {
   background-color: #4caf50;
-  color: #fff;
+  color: #6bc900;
 }
 .clr-info {
   background-color: #00bcd4;
@@ -272,11 +272,11 @@ button:active:enabled {
 }
 .clr-warning {
   background-color: #ffc107;
-  color: #fff;
+  color: #feed00;
 }
 .clr-danger {
   background-color: #f44336;
-  color: #fff;
+  color: #ee0202;
 }
 .btn-wide {
   width: 100%;
