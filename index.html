@@ -12,208 +12,230 @@
 <body>
     <script src="scripts.js"></script>
     <div class="container">
-        <div class="row">
-            <!-- LEFT COLUMN START -->
-            <div class="column left">
-                <div class="column-content">
-                    <button id="eh-btnImportImage" type="button" class="clr-primary btn-wide">Import Image</button>
-                    <input type="file" id="eh-fileSelector" style="display: none;">
-                    <div>
-                        <fieldset style="border-color: #242424;">
-                            <div class="div-image-container">
-                                <img id="eh-imgSource" />
-                            </div>
-                            <div class="div-status">
-                                <span class="status-text" id="eh-lblStatus">NO IMAGE</span>
-                            </div>
-                        </fieldset>
-                    </div>
-                    <div>
-                        <fieldset>
-                            <legend>
-                                <span class="info">🛈<span class="tooltip">
-                                        Determines the resolution of the source image. The initial size will be
-                                        auto-selected when an image is loaded.<br><br>
-                                        64 &nbsp; = &nbsp; 64 x 64 canvas<br>
-                                        128 &nbsp; = &nbsp; 128 x 128 canvas<br>
-                                        256 &nbsp; = &nbsp; 256 x 256 canvas<br>
-                                        512 &nbsp; = &nbsp; 512 x 512 canvas
-                                    </span></span>
-                                Source Image Resize
-                            </legend>
-                            <div>
-                                <label for="eh-opt64" class="l-radio">
-                                    <input type="radio" id="eh-opt64" value="64" name="eh-optSourceSize" tabindex="1">
-                                    <span>64</span>
-                                </label>
-                                <label for="eh-opt128" class="l-radio">
-                                    <input type="radio" id="eh-opt128" value="128" name="eh-optSourceSize" tabindex="2"
-                                        checked="checked">
-                                    <span>128</span>
-                                </label>
-                                <label for="eh-opt256" class="l-radio">
-                                    <input type="radio" id="eh-opt256" value="256" name="eh-optSourceSize" tabindex="3">
-                                    <span>256</span>
-                                </label>
-                                <label for="eh-opt512" class="l-radio">
-                                    <input type="radio" id="eh-opt512" value="512" name="eh-optSourceSize" tabindex="4">
-                                    <span>512</span>
-                                </label>
-                            </div>
-                        </fieldset>
-                        <fieldset>
-                            <legend>
-                                <span class="info">🛈<span class="tooltip">
-                                        Determines if smoothing is applied when resizing source images.<br><br>
-                                        On &nbsp; = &nbsp; Smoother appearance &nbsp; (antialiasing)<br>
-                                        Off &nbsp; = &nbsp; Sharper / jagged appearance
-                                    </span></span>
-                                Resize Smoothing
-                            </legend>
-                            <div>
-                                <label for="eh-optOn" class="l-radio">
-                                    <input type="radio" id="eh-optOn" value="low" name="eh-optSmoothing" tabindex="1"
-                                        checked="checked">
-                                    <span>On</span>
-                                </label>
-                                <label for="eh-optOff" class="l-radio">
-                                    <input type="radio" id="eh-optOff" value="full" name="eh-optSmoothing" tabindex="2">
-                                    <span>Off</span>
-                                </label>
-                            </div>
-                        </fieldset>
-                        <fieldset>
-                            <legend>
-                                <span class="info">🛈<span class="tooltip">
-                                        Determines the colour mode used when creating the emblem.<br><br>
-                                        Low &nbsp; = &nbsp; Reduced colour palette &nbsp; (smaller server request
-                                        size)<br>
-                                        Full &nbsp; = &nbsp; The full colours from the source image &nbsp; (larger
-                                        server request size)
-                                    </span></span>
-                                Colour Mode
-                            </legend>
-                            <div>
-                                <label for="eh-optLow" class="l-radio">
-                                    <input type="radio" id="eh-optLow" value="low" name="eh-optColour" tabindex="1">
-                                    <span>Low</span>
-                                </label>
-                                <label for="eh-optFull" class="l-radio">
-                                    <input type="radio" id="eh-optFull" value="full" name="eh-optColour" tabindex="2"
-                                        checked="checked">
-                                    <span>Full</span>
-                                </label>
-                            </div>
-                        </fieldset>
-                        <fieldset>
-                            <legend>
-                                <span class="info">🛈<span class="tooltip">
-                                        Determines the emblem creation method. Depending on the visual elements of the
-                                        source image, either rows or columns will result in a smaller server request
-                                        size.<br><br>
-                                        Auto &nbsp; = &nbsp; Horizontal & Vertical are calculated and the smallest is
-                                        selected &nbsp; (slower)<br>
-                                        Rows &nbsp; = &nbsp; Horizontal<br>
-                                        Columns &nbsp; = &nbsp; Vertical<br><br>
-                                        The Auto option finds the best method each time but may take longer to process
-                                        larger images on some computers.
-                                    </span></span>
-                                SVG Creation Method
-                            </legend>
-                            <div>
-                                <label for="eh-optAuto" class="l-radio">
-                                    <input type="radio" id="eh-optAuto" name="eh-optOrientation" tabindex="1"
-                                        checked="checked">
-                                    <span>Auto</span>
-                                </label>
-                                <label for="eh-optRows" class="l-radio">
-                                    <input type="radio" id="eh-optRows" name="eh-optOrientation" tabindex="2">
-                                    <span>Rows</span>
-                                </label>
-                                <label for="eh-optColumns" class="l-radio">
-                                    <input type="radio" id="eh-optColumns" name="eh-optOrientation" tabindex="3">
-                                    <span>Columns</span>
-                                </label>
-                            </div>
-                        </fieldset>
-                        <fieldset>
-                            <legend>
-                                <span class="info">🛈<span class="tooltip">
-                                        Determines the amount of decimal places used for elements of the emblem
-                                        SVG.<br><br>
-                                        Low &nbsp; = &nbsp; 3 &nbsp; (recommended)<br>
-                                        Medium &nbsp; = &nbsp; 4<br>
-                                        High &nbsp; = &nbsp; 5<br><br>
-                                        Only increase this setting if there is visible tearing in the emblem (lines
-                                        present between the colours).
-                                    </span></span>
-                                Decimal Precision
-                            </legend>
-                            <div>
-                                <label for="eh-opt3" class="l-radio">
-                                    <input type="radio" id="eh-opt3" value="3" name="eh-optAccuracy" tabindex="3"
-                                        checked="checked">
-                                    <span>Low</span>
-                                </label>
-                                <label for="eh-opt4" class="l-radio">
-                                    <input type="radio" id="eh-opt4" value="4" name="eh-optAccuracy" tabindex="4">
-                                    <span>Medium</span>
-                                </label>
-                                <label for="eh-opt5" class="l-radio">
-                                    <input type="radio" id="eh-opt5" value="5" name="eh-optAccuracy" tabindex="5">
-                                    <span>High</span>
-                                </label>
-                            </div>
-                        </fieldset>
-                        <button disabled id="eh-btnProcessImage" type="button" class="clr-inactive btn-wide">Create
-                            Emblem</button>
-                    </div>
-                </div>
-            </div>
-            <!-- LEFT COLUMN END -->
-            <!-- MIDDLE COLUMN START -->
-            <div class="column middle">
-                <div class="column-content">
-                    <div class="div-svg-container">
-                        <div class="div-svg-image">
-                            <svg width="512" height="512">
-                                <defs>
-                                    <pattern id="checkerDark" x="0" y="0" width="16" height="16"
-                                        patternUnits="userSpaceOnUse">
-                                        <rect x="0" y="0" width="8" height="8" fill="#46494E"></rect>
-                                        <rect x="0" y="8" width="8" height="8" fill="#777672"></rect>
-                                        <rect x="8" y="0" width="8" height="8" fill="#777672"></rect>
-                                        <rect x="8" y="8" width="8" height="8" fill="#46494E"></rect>
-                                    </pattern>
-                                </defs>
-                                <rect x="0" y="0" width="100%" height="100%" fill="url(#checkerDark)"></rect>
-                            </svg>
+        <!-- HEADER START -->
+        <header class="header">
+            <h1>GTA Online Crew Emblem Creator</h1>
+        </header>
+        <!-- HEADER END -->
+        <div class="main-content">
+            <div class="sidebar">
+                <!-- LEFT COLUMN START -->
+                <div class="column left">
+                    <div class="column-content">
+                        <button id="eh-btnImportImage" type="button" class="clr-primary btn-wide">Import Image</button>
+                        <input type="file" id="eh-fileSelector" style="display: none;">
+                        <div>
+                            <fieldset style="border-color: #242424;">
+                                <div class="div-image-container">
+                                    <img id="eh-imgSource" />
+                                </div>
+                                <div class="div-status">
+                                    <span class="status-text" id="eh-lblStatus">NO IMAGE</span>
+                                </div>
+                            </fieldset>
                         </div>
-                        <div class="div-svg-image" id="eh-svgPreview"></div>
-                    </div>
-                    <div id="eh-divInfo" class="div-info clr-inactive">⠀</div>
-                    <div class="div-support-link">
-                        <a href="https://www.youtube.com/watch?v=bGI88KDaKmY" target="_blank">Help
-                            & Feedback</a>
+                        <div>
+                            <fieldset>
+                                <legend>
+                                    <span class="info">🛈<span class="tooltip">
+                                            Determines the resolution of the source image. The initial size will be
+                                            auto-selected when an image is loaded.<br><br>
+                                            64 &nbsp; = &nbsp; 64 x 64 canvas<br>
+                                            128 &nbsp; = &nbsp; 128 x 128 canvas<br>
+                                            256 &nbsp; = &nbsp; 256 x 256 canvas<br>
+                                            512 &nbsp; = &nbsp; 512 x 512 canvas
+                                        </span></span>
+                                    Source Image Resize
+                                </legend>
+                                <div>
+                                    <label for="eh-opt64" class="l-radio">
+                                        <input type="radio" id="eh-opt64" value="64" name="eh-optSourceSize"
+                                            tabindex="1">
+                                        <span>64</span>
+                                    </label>
+                                    <label for="eh-opt128" class="l-radio">
+                                        <input type="radio" id="eh-opt128" value="128" name="eh-optSourceSize"
+                                            tabindex="2" checked="checked">
+                                        <span>128</span>
+                                    </label>
+                                    <label for="eh-opt256" class="l-radio">
+                                        <input type="radio" id="eh-opt256" value="256" name="eh-optSourceSize"
+                                            tabindex="3">
+                                        <span>256</span>
+                                    </label>
+                                    <label for="eh-opt512" class="l-radio">
+                                        <input type="radio" id="eh-opt512" value="512" name="eh-optSourceSize"
+                                            tabindex="4">
+                                        <span>512</span>
+                                    </label>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <legend>
+                                    <span class="info">🛈<span class="tooltip">
+                                            Determines if smoothing is applied when resizing source images.<br><br>
+                                            On &nbsp; = &nbsp; Smoother appearance &nbsp; (antialiasing)<br>
+                                            Off &nbsp; = &nbsp; Sharper / jagged appearance
+                                        </span></span>
+                                    Resize Smoothing
+                                </legend>
+                                <div>
+                                    <label for="eh-optOn" class="l-radio">
+                                        <input type="radio" id="eh-optOn" value="low" name="eh-optSmoothing"
+                                            tabindex="1" checked="checked">
+                                        <span>On</span>
+                                    </label>
+                                    <label for="eh-optOff" class="l-radio">
+                                        <input type="radio" id="eh-optOff" value="full" name="eh-optSmoothing"
+                                            tabindex="2">
+                                        <span>Off</span>
+                                    </label>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <legend>
+                                    <span class="info">🛈<span class="tooltip">
+                                            Determines the colour mode used when creating the emblem.<br><br>
+                                            Low &nbsp; = &nbsp; Reduced colour palette &nbsp; (smaller server request
+                                            size)<br>
+                                            Full &nbsp; = &nbsp; The full colours from the source image &nbsp; (larger
+                                            server request size)
+                                        </span></span>
+                                    Colour Mode
+                                </legend>
+                                <div>
+                                    <label for="eh-optLow" class="l-radio">
+                                        <input type="radio" id="eh-optLow" value="low" name="eh-optColour" tabindex="1">
+                                        <span>Low</span>
+                                    </label>
+                                    <label for="eh-optFull" class="l-radio">
+                                        <input type="radio" id="eh-optFull" value="full" name="eh-optColour"
+                                            tabindex="2" checked="checked">
+                                        <span>Full</span>
+                                    </label>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <legend>
+                                    <span class="info">🛈<span class="tooltip">
+                                            Determines the emblem creation method. Depending on the visual elements of
+                                            the
+                                            source image, either rows or columns will result in a smaller server request
+                                            size.<br><br>
+                                            Auto &nbsp; = &nbsp; Horizontal & Vertical are calculated and the smallest
+                                            is
+                                            selected &nbsp; (slower)<br>
+                                            Rows &nbsp; = &nbsp; Horizontal<br>
+                                            Columns &nbsp; = &nbsp; Vertical<br><br>
+                                            The Auto option finds the best method each time but may take longer to
+                                            process
+                                            larger images on some computers.
+                                        </span></span>
+                                    SVG Creation Method
+                                </legend>
+                                <div>
+                                    <label for="eh-optAuto" class="l-radio">
+                                        <input type="radio" id="eh-optAuto" name="eh-optOrientation" tabindex="1"
+                                            checked="checked">
+                                        <span>Auto</span>
+                                    </label>
+                                    <label for="eh-optRows" class="l-radio">
+                                        <input type="radio" id="eh-optRows" name="eh-optOrientation" tabindex="2">
+                                        <span>Rows</span>
+                                    </label>
+                                    <label for="eh-optColumns" class="l-radio">
+                                        <input type="radio" id="eh-optColumns" name="eh-optOrientation" tabindex="3">
+                                        <span>Columns</span>
+                                    </label>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <legend>
+                                    <span class="info">🛈<span class="tooltip">
+                                            Determines the amount of decimal places used for elements of the emblem
+                                            SVG.<br><br>
+                                            Low &nbsp; = &nbsp; 3 &nbsp; (recommended)<br>
+                                            Medium &nbsp; = &nbsp; 4<br>
+                                            High &nbsp; = &nbsp; 5<br><br>
+                                            Only increase this setting if there is visible tearing in the emblem (lines
+                                            present between the colours).
+                                        </span></span>
+                                    Decimal Precision
+                                </legend>
+                                <div>
+                                    <label for="eh-opt3" class="l-radio">
+                                        <input type="radio" id="eh-opt3" value="3" name="eh-optAccuracy" tabindex="3"
+                                            checked="checked">
+                                        <span>Low</span>
+                                    </label>
+                                    <label for="eh-opt4" class="l-radio">
+                                        <input type="radio" id="eh-opt4" value="4" name="eh-optAccuracy" tabindex="4">
+                                        <span>Medium</span>
+                                    </label>
+                                    <label for="eh-opt5" class="l-radio">
+                                        <input type="radio" id="eh-opt5" value="5" name="eh-optAccuracy" tabindex="5">
+                                        <span>High</span>
+                                    </label>
+                                </div>
+                            </fieldset>
+                            <button disabled id="eh-btnProcessImage" type="button" class="clr-inactive btn-wide">Create
+                                Emblem</button>
+                        </div>
                     </div>
                 </div>
+                <!-- LEFT COLUMN END -->
             </div>
-            <!-- MIDDLE COLUMN END -->
-            <!-- RIGHT COLUMN START -->
-            <div class="column right">
-                <div class="column-content">
-                    <button disabled id="eh-btnCreateCode" type="button" class="clr-inactive btn-wide">Generate
-                        Code</button>
-                    <textarea id="eh-txtConsoleCode" class="textarea"></textarea>
-                    <div class="div-info div-mobile">
-                        <strong>Note for mobile users:</strong><br>
-                        Some mobile devices will not be able to copy all of the code. You may need to copy it in
-                        sections.
+            <!-- SIDEBAR END -->
+            <div class="content">
+                <!-- MIDDLE COLUMN START -->
+                <div class="column middle">
+                    <div class="column-content">
+                        <div class="div-svg-container">
+                            <div class="div-svg-image">
+                                <svg width="512" height="512">
+                                    <defs>
+                                        <pattern id="checkerDark" x="0" y="0" width="16" height="16"
+                                            patternUnits="userSpaceOnUse">
+                                            <rect x="0" y="0" width="8" height="8" fill="#46494E"></rect>
+                                            <rect x="0" y="8" width="8" height="8" fill="#777672"></rect>
+                                            <rect x="8" y="0" width="8" height="8" fill="#777672"></rect>
+                                            <rect x="8" y="8" width="8" height="8" fill="#46494E"></rect>
+                                        </pattern>
+                                    </defs>
+                                    <rect x="0" y="0" width="100%" height="100%" fill="url(#checkerDark)"></rect>
+                                </svg>
+                            </div>
+                            <div class="div-svg-image" id="eh-svgPreview"></div>
+                        </div>
+                        <div id="eh-divInfo" class="div-info clr-inactive">⠀</div>
+                        <!-- NEW ROW FOR GITHUB BUTTON -->
+                        <div class="row">
+                            <div class="column-content" style="text-align: center; margin-top: 16px;">
+                                <button
+                                    onclick="window.open('https://github.com/apex4710/crew-emblem-creator', '_blank')"
+                                    class="clr-primary btn-wide">View on GitHub</button>
+                            </div>
+                        </div>
                     </div>
-                    <button disabled id="eh-btnCopyCode" type="button" class="clr-inactive btn-wide">Copy Code</button>
                 </div>
+                <!-- MIDDLE COLUMN END -->
+                <!-- RIGHT COLUMN START -->
+                <div class="column right">
+                    <div class="column-content">
+                        <button disabled id="eh-btnCreateCode" type="button" class="clr-inactive btn-wide">Generate
+                            Code</button>
+                        <textarea id="eh-txtConsoleCode" class="textarea"></textarea>
+                        <div class="div-info div-mobile">
+                            <strong>Note for mobile users:</strong><br>
+                            Some mobile devices will not be able to copy all of the code. You may need to copy it in
+                            sections.
+                        </div>
+                        <button disabled id="eh-btnCopyCode" type="button" class="clr-inactive btn-wide">Copy
+                            Code</button>
+                    </div>
+                </div>
+                <!-- RIGHT COLUMN END -->
             </div>
-            <!-- RIGHT COLUMN END -->
         </div>
     </div>
 </body>

@@ -1,4 +1,5 @@
-/* prettier-ignore */ /* Prettier Ignore */
+/* prettier-ignore */
+/* Prettier Ignore */
 /* prettier-ignore */
 
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
@@ -8,7 +9,7 @@ body {
   line-height: 1;
   font-family: "Source Sans Pro", Helvetica, sans-serif;
   color: #eaeaea;
-  background-color: #1e1e1e;
+  background-color: #23272a; /* Updated default background color */
 }
 article,
 aside,
@@ -103,11 +104,21 @@ html,
 body {
   margin: 0px;
   height: 100%;
-  background-color: #1e1e1e;
+  background-color: #23272a; /* Updated background color */
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   font-family: "Source Sans Pro", Helvetica, sans-serif;
   font-weight: 700;
+}
+header {
+  background-color: #2c2f33; /* Updated background color */
+  padding: 20px 0;
+  text-align: center;
+  color: #eaeaea; /* Matching text color */
+  font-size: 2em;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-bottom: 2px solid #00aaff; /* Matching accent color */
 }
 fieldset {
   border: 2px solid #00aaff;
@@ -116,7 +127,7 @@ fieldset {
   max-width: 512px;
   margin: 20px auto;
   position: relative;
-  overflow: visible; /* Ensure no clipping */
+  overflow: visible;
 }
 legend {
   color: #00aaff;
@@ -129,7 +140,7 @@ legend {
 }
 /* Tooltip Styles */
 .tooltip-container {
-  position: relative; /* Add position relative to manage stacking context */
+  position: relative;
 }
 .info:hover .tooltip {
   display: block;
@@ -157,8 +168,8 @@ legend {
   max-width: 512px;
   padding: 12px;
   box-shadow: 4px 4px 4px 2px rgb(0 0 0 / 0.2);
-  top: 10px; /* Adjust position to see if it displays correctly */
-  left: 0px; /* Adjust position to see if it displays correctly */
+  top: 10px;
+  left: 0px;
 }
 @keyframes fade {
   0% {
@@ -231,18 +242,18 @@ legend {
 
 /* Enhanced button styles */
 button {
-  border-radius: 50px; /* More rounded edges */
+  border-radius: 50px;
   outline: none;
   font-size: 16px;
   font-weight: bold;
   color: #fff;
-  background: linear-gradient(135deg, #0078d7, #005f9e); /* Gradient background */
-  padding: 14px 28px; /* Slightly adjusted padding */
-  margin: 10px 0px; /* Adjusted margin for better spacing */
-  transition: all 0.4s ease; /* Smoother transition */
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
-  backdrop-filter: saturate(180%) blur(10px); /* Slightly more intense backdrop filter */
-  border: 2px solid rgba(255, 255, 255, 0.3); /* Slight border for definition */
+  background: linear-gradient(135deg, #0078d7, #005f9e);
+  padding: 14px 28px;
+  margin: 10px 0px;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.2);
+  backdrop-filter: saturate(180%) blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 button:hover:enabled {
@@ -297,7 +308,7 @@ button:disabled:hover {
 
 .row {
   height: 100%;
-  transition: all 0.5s ease-in-out; /* Smoother transition */
+  transition: all 0.5s ease-in-out;
 }
 .row:after {
   content: "";
@@ -307,27 +318,27 @@ button:disabled:hover {
 .column {
   float: left;
   min-height: 100%;
-  transition: all 0.5s ease-in-out; /* Smoother transition */
+  transition: all 0.5s ease-in-out;
 }
 .left,
 .right {
   width: 20%;
-  background-color: #2c2f33; /* Updated background color for a professional look */
+  background-color: #2c2f33;
   box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.5s ease-in-out; /* Smoother transition */
+  transition: background-color 0.5s ease-in-out;
   backdrop-filter: blur(10px);
 }
 .middle {
   width: 60%;
-  background-color: #23272a; /* Updated background color for a professional look */
-  transition: background-color 0.5s ease-in-out; /* Smoother transition */
+  background-color: #23272a;
+  transition: background-color 0.5s ease-in-out;
 }
 .column-content {
   padding: 16px;
   text-align: center;
   height: auto;
   color: #eaeaea;
-  transition: all 0.5s ease-in-out; /* Smoother transition */
+  transition: all 0.5s ease-in-out;
 }
 .div-info {
   border-radius: 8px;
@@ -337,7 +348,7 @@ button:disabled:hover {
   background-color: rgba(40, 44, 52, 0.8);
   box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
-  transition: all 0.5s ease-in-out; /* Smoother transition */
+  transition: all 0.5s ease-in-out;
 }
 .div-status {
   padding-bottom: 8px;
@@ -349,9 +360,8 @@ button:disabled:hover {
   font-size: small;
   font-weight: 600;
   color: #fff;
-  transition: all 0.5s ease-in-out; /* Smoother transition */
+  transition: all 0.5s ease-in-out;
 }
-/* Size Details Styles */
 .div-svg-container .status-text {
   background-color: #4caf50;
   color: #fff;
@@ -381,31 +391,31 @@ button:disabled:hover {
   margin: 8px;
   min-height: 512px;
   position: relative;
-  transition: all 0.5s ease-in-out; /* Smoother transition */
+  transition: all 0.5s ease-in-out;
 }
 
 /* Enhanced Status Button Colors */
 #eh-btnProcessImage {
-  border-radius: 50px; /* More rounded edges */
+  border-radius: 50px;
   outline: none;
   font-size: 16px;
   font-weight: bold;
   color: #fff;
-  background: linear-gradient(135deg, #0078d7, #005f9e); /* Gradient background */
-  padding: 14px 28px; /* Slightly adjusted padding */
-  margin: 10px 0px; /* Adjusted margin for better spacing */
-  transition: all 0.4s ease; /* Smoother transition */
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
-  backdrop-filter: saturate(180%) blur(10px); /* Slightly more intense backdrop filter */
-  border: 2px solid rgba(255, 255, 255, 0.3); /* Slight border for definition */
+  background: linear-gradient(135deg, #0078d7, #005f9e);
+  padding: 14px 28px;
+  margin: 10px 0px;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.2);
+  backdrop-filter: saturate(180%) blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 #eh-btnProcessImage.ok {
-  background: linear-gradient(135deg, #4caf50, #388e3c); /* Gradient for success state */
+  background: linear-gradient(135deg, #4caf50, #388e3c);
 }
 
 #eh-btnProcessImage.too-expensive {
-  background: linear-gradient(135deg, #f44336, #d32f2f); /* Gradient for danger state */
+  background: linear-gradient(135deg, #f44336, #d32f2f);
 }
 
 /* Inactive Buttons Grayed Out */
@@ -413,7 +423,7 @@ button:disabled,
 button:disabled:hover {
   color: #aaa;
   background: #444;
-  border: 2px solid #555; /* Consistent border width */
+  border: 2px solid #555;
   box-shadow: none;
   cursor: not-allowed;
 }
@@ -516,6 +526,7 @@ button:disabled:hover {
   font-weight: 500;
   color: #eaeaea;
 }
+
 /* Mobile devices and smaller screens */
 @media screen and (max-width: 1110px) {
   .column,
