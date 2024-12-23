@@ -114,8 +114,9 @@ fieldset {
   padding: 8px;
   border-radius: 8px;
   max-width: 512px;
-  margin: 16px auto;
-  backdrop-filter: blur(10px);
+  margin: 20px auto;
+  position: relative;
+  overflow: visible; /* Ensure no clipping */
 }
 legend {
   color: #00aaff;
@@ -127,9 +128,11 @@ legend {
   text-shadow: 1px 1px 2px #1e1e1e;
 }
 /* Tooltip Styles */
+.tooltip-container {
+  position: relative; /* Add position relative to manage stacking context */
+}
 .info:hover .tooltip {
   display: block;
-  z-index: 10000;
 }
 .info {
   cursor: help;
@@ -145,8 +148,8 @@ legend {
   margin-left: 8px;
   margin-top: 8px;
   position: absolute;
-  z-index: 10000;
-  background-color: rgba(41, 41, 41, 0.8);
+  z-index: 1000000;
+  background-color: rgb(41, 41, 41);
   border: 2px solid #444;
   border-radius: 8px;
   font-size: small;
@@ -154,6 +157,8 @@ legend {
   max-width: 512px;
   padding: 12px;
   box-shadow: 4px 4px 4px 2px rgb(0 0 0 / 0.2);
+  top: 10px; /* Adjust position to see if it displays correctly */
+  left: 0px; /* Adjust position to see if it displays correctly */
 }
 @keyframes fade {
   0% {
