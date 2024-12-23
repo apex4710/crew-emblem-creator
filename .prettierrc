@@ -1,0 +1,14 @@
+{
+  "overrides": [
+    {
+      "files": "*.css",
+      "options": {
+        "printWidth": 120,
+        "tabWidth": 2,
+        "cssWhitespaceSensitivity": "ignore",
+        "proseWrap": "always",
+        "bracketSameLine": true
+      }
+    }
+  ]
+}
