@@ -160,17 +160,19 @@ legend {
   margin-top: 8px;
   position: absolute;
   z-index: 1000000;
-  background-color: rgb(41, 41, 41);
-  border: 2px solid #444;
+  background: rgba(41, 41, 41, 0.792); /* Frosted glass effect */
+  border: 2px solid rgba(255, 255, 255, 0.3); /* Lighter border */
   border-radius: 8px;
   font-size: small;
   line-height: 1.4;
   max-width: 512px;
   padding: 12px;
-  box-shadow: 4px 4px 4px 2px rgb(0 0 0 / 0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Softer shadow */
+  backdrop-filter: blur(10px) saturate(180%); /* Frosted glass effect */
   top: 10px;
   left: 0px;
 }
+
 @keyframes fade {
   0% {
     opacity: 0;
