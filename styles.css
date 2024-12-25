@@ -1,45 +1,54 @@
-/* prettier-ignore */
+
 /* Prettier Ignore */
-/* prettier-ignore */
+
 
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
-  margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
 }
+
+/* Body Style */
 body {
   line-height: 1;
   font-family: "Source Sans Pro", Helvetica, sans-serif;
   color: #eaeaea;
   background-color: #23272a; /* Updated default background color */
 }
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
+html, body {
+  margin: 0px;
+  height: 100%;
+  background-color: #23272a; /* Updated background color */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+/* Block Element Defaults */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block;
 }
+
 nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-blockquote,
-q {
+
+blockquote, q {
   quotes: none;
 }
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
+blockquote:before, blockquote:after, q:before, q:after {
   content: "";
   content: none;
 }
+
+/* Links */
 a {
   margin: 0;
   padding: 0;
@@ -52,37 +61,44 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+/* Inline Text Elements */
 ins {
   background-color: #ff6f61;
   color: #000;
   text-decoration: none;
 }
+
 mark {
   background-color: #ff6f61;
   color: #000;
   font-style: italic;
   font-weight: 700;
 }
+
 del {
   text-decoration: line-through;
 }
-abbr[title],
-dfn[title] {
+
+abbr[title], dfn[title] {
   border-bottom: 1px dotted;
   cursor: help;
 }
+
+/* Tables */
 table {
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
   margin-bottom: 1rem;
 }
-th,
-td {
+th, td {
   padding: 0.75rem;
   text-align: left;
   border-top: 1px solid #444;
 }
+
+/* Horizontal Rule */
 hr {
   display: block;
   height: 1px;
@@ -91,30 +107,27 @@ hr {
   margin: 1em 0;
   padding: 0;
 }
-input,
-select {
+
+/* Form Elements */
+input, select {
   vertical-align: middle;
   border: 1px solid #444;
   padding: 0.5rem;
   border-radius: 4px;
   background-color: #333;
   color: #eaeaea;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
 }
-html,
-body {
-  margin: 0px;
-  height: 100%;
-  background-color: #23272a; /* Updated background color */
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
-  font-weight: 700;
+
+input:focus, select:focus {
+  border-color: #00aaff;
+  background-color: #444;
 }
 
 /* Header */
 .header {
   background-color: #2c2f33;
-  padding: 20px 20px; /* Adjusted padding for better proportion */
+  padding: 30px 20px; /* Adjusted padding for better proportion */
   text-align: center;
   color: #eaeaea;
   font-size: 2.2em; /* Adjusted font size */
@@ -122,7 +135,7 @@ body {
   font-family: "Poppins", sans-serif; /* Modern font */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-bottom: 2px solid #00aaff;
-  margin-bottom: 20px; /* Added margin for space below the header */
+  margin-bottom: 30px; /* Added margin for space below the header */
 }
 
 /* Subtle Gradient Text */
@@ -288,8 +301,7 @@ legend {
 }
 
 /* Customized Input Elements */
-input,
-select {
+input, select {
   vertical-align: middle;
   border: 1px solid #444;
   padding: 0.5rem;
@@ -299,8 +311,7 @@ select {
   transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
-input:focus,
-select:focus {
+input:focus, select:focus {
   border-color: #00aaff;
   background-color: #444;
 }
@@ -316,8 +327,7 @@ select:focus {
   -webkit-tap-highlight-color: transparent;
 }
 
-.l-radio:hover,
-.l-radio:focus-within {
+.l-radio:hover, .l-radio:focus-within {
   background: rgba(159, 159, 159, 0.1);
 }
 
@@ -381,8 +391,7 @@ button:active:enabled {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-button:disabled,
-button:disabled:hover {
+button:disabled, button:disabled:hover {
   color: #aaa;
   background: #444;
   border: 2px solid #555;
@@ -417,7 +426,6 @@ button:disabled:hover {
 }
 
 /* Containers */
-
 .container {
   width: 100%;
   height: 100%;
@@ -436,20 +444,7 @@ button:disabled:hover {
   transition: all 0.5s ease-in-out;
   margin-bottom: 20px; /* Add margin for spacing between columns */
 }
-
-/* Modern Card Design */
-/*
-.left {
-  width: 20%;
-  background: linear-gradient(135deg, #2c2f33, #23272a);
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow-y: auto;
-}
-*/
-
-.left {
+.left, .right {
   width: 100%; /* Full width for columns on smaller screens */
   box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.2);
   padding: 20px;
@@ -458,17 +453,6 @@ button:disabled:hover {
   background-color: #2c2f33;
   transition: background-color 0.5s ease-in-out;
   backdrop-filter: blur(10px);
-}
-
-.right {
-  width: 100%; /* Full width for columns on smaller screens */
-  box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.2);
-  padding: 20px;
-  margin-bottom: 20px; /* Add margin for spacing */
-  background-color: #2c2f33;
-  transition: background-color 0.5s ease-in-out;
-  backdrop-filter: blur(10px);
-  border-radius: 8px;
 }
 
 .middle {
@@ -520,6 +504,7 @@ button.clr-primary {
   text-align: center;
 }
 
+/* Information Box */
 .div-info {
   border-radius: 8px;
   padding: 10px 20px;
@@ -534,35 +519,24 @@ button.clr-primary {
   font-weight: 600;
   color: #fff;
 }
-
 .div-info strong {
   color: #00aaff; /* Highlight the important text */
 }
+.div-info.clr-success {
+  background-color: #4caf50;
+  color: #fff;
+}
+.div-info.clr-danger {
+  background-color: #f44336;
+  color: #fff;
+}
 
+/* Status Text Colors */
 .div-status {
   padding-bottom: 8px;
   align-items: center;
   justify-content: center;
 }
-
-/* SVG Preview Container */
-.div-svg-container {
-  margin: 8px;
-  min-height: 512px;
-  position: relative;
-  transition: all 0.5s ease-in-out;
-  overflow: hidden; /* Ensure content doesn't overflow the container */
-}
-
-/* Center and contain the SVG within the container */
-.div-svg-image {
-  max-width: 100%; /* Scale the width to fit the container */
-  max-height: 100%; /* Scale the height to fit the container */
-  object-fit: contain; /* Ensure the image is contained within the container */
-  margin: auto;
-}
-
-/* Status Text Colors */
 .status-text {
   text-align: center;
   font-size: small;
@@ -579,13 +553,22 @@ button.clr-primary {
   display: inline-block;
 }
 
+/* SVG Preview Container */
 .div-svg-container {
   margin: 8px;
   min-height: 512px;
   position: relative;
   transition: all 0.5s ease-in-out;
+  overflow: hidden; /* Ensure content doesn't overflow the container */
+}
+.div-svg-image {
+  max-width: 100%; /* Scale the width to fit the container */
+  max-height: 100%; /* Scale the height to fit the container */
+  object-fit: contain; /* Ensure the image is contained within the container */
+  margin: auto;
 }
 
+/* Textarea */
 .textarea {
   display: block;
   width: 100%;
@@ -603,29 +586,13 @@ button.clr-primary {
   border-radius: 4px;
   backdrop-filter: blur(10px);
 }
-
 textarea[readonly] {
   background-color: #333; /* Same as other inputs */
   color: #eaeaea; /* Text color */
   border: 1px solid #444; /* Border color */
   cursor: not-allowed; /* Change cursor to indicate non-editable */
-  -webkit-user-select: text; /* Allow text selection for other browsers */
-  user-select: text; /* Allow text selection for Safari and iOS */
-}
-
-.div-info.clr-success {
-  background-color: #4caf50;
-  color: #fff;
-}
-
-.div-info.clr-danger {
-  background-color: #f44336;
-  color: #fff;
-}
-
-.button.clr-primary {
-  background-color: #0c7ad3;
-  color: #fff;
+  -webkit-user-select: text; /* Allow text selection for Safari and iOS */
+  user-select: text; /* Allow text selection for other browsers */
 }
 
 /* Responsive Design */
