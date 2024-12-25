@@ -891,10 +891,12 @@ document.addEventListener("DOMContentLoaded", () => {
       // The emblem is small enough to upload
       setClass("eh-divInfo", "div-info clr-success");
       document.getElementById("eh-divInfo").innerHTML =
-        "OK:&nbsp;&nbsp;&nbsp; " +
+        "All systems go! 🚀 Your emblem size is within the safe zone at " +
         numberWithCommas(EH.encodedLength) +
-        "&nbsp;&nbsp;/&nbsp;&nbsp;" +
-        numberWithCommas(EH.maxEncodedLength);
+        " bytes out of the maximum allowed " +
+        numberWithCommas(EH.maxEncodedLength) +
+        " bytes. Ready for upload!";
+
       // Enable the Create Code button
       setClass("eh-btnCreateCode", "btn-wide clr-primary");
       enableElement("eh-btnCreateCode");
@@ -906,10 +908,11 @@ document.addEventListener("DOMContentLoaded", () => {
       // The emblem is too large to upload
       setClass("eh-divInfo", "div-info clr-danger");
       document.getElementById("eh-divInfo").innerHTML =
-        "Too Expensive:&nbsp;&nbsp;&nbsp; " +
+        "Hold your horses! 🐎 Your emblem is a bit hefty at " +
         numberWithCommas(EH.encodedLength) +
-        "&nbsp;&nbsp;/&nbsp;&nbsp;" +
-        numberWithCommas(EH.maxEncodedLength);
+        " bytes, exceeding the limit of " +
+        numberWithCommas(EH.maxEncodedLength) +
+        " bytes. Time to trim down some pixels!";
 
       console.log("Danger: " + document.getElementById("eh-divInfo").className);
     }

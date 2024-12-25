@@ -535,6 +535,10 @@ button.clr-primary {
   color: #fff;
 }
 
+.div-info strong {
+  color: #00aaff; /* Highlight the important text */
+}
+
 .div-status {
   padding-bottom: 8px;
   align-items: center;
