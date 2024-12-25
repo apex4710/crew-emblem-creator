@@ -587,6 +587,15 @@ button.clr-primary {
   backdrop-filter: blur(10px);
 }
 
+textarea[readonly] {
+  background-color: #333; /* Same as other inputs */
+  color: #eaeaea; /* Text color */
+  border: 1px solid #444; /* Border color */
+  cursor: not-allowed; /* Change cursor to indicate non-editable */
+  user-select: text; /* Allow text selection for other browsers */
+  -webkit-user-select: text; /* Allow text selection for Safari and iOS */
+}
+
 .div-svg-container {
   margin: 8px;
   min-height: 512px;
