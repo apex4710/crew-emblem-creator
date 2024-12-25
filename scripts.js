@@ -884,6 +884,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Display the emblem SVG preview
     document.getElementById("eh-svgPreview").innerHTML = "";
+    requestAnimationFrame(() => {
+      document.getElementById("eh-svgPreview").appendChild(EH.svg.getSVG());
+    });
+
     document.getElementById("eh-svgPreview").appendChild(EH.svg.getSVG());
 
     // Check the size of the resulting emblem

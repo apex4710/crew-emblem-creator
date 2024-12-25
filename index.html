@@ -4,9 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Emblem Helper</title>
-    <meta name="author" content="Flashback-GTA">
+    <title>GTA Crew Emblem Creator</title>
+    <meta name="author" content="APEX">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
@@ -17,19 +18,18 @@
             <h1>GTA Online Crew Emblem Creator</h1>
         </header>
         <!-- HEADER END -->
-
         <div class="container">
             <div class="row">
                 <!-- LEFT COLUMN START -->
                 <div class="column left">
                     <div class="card">
                         <div class="card-header">
-                            <span class="icon">📁</span>
-                            Import Image
+                            <i class="fas fa-file"></i> &nbsp; Import Image
                         </div>
                         <div class="card-body">
-                            <button id="eh-btnImportImage" type="button" class="clr-primary btn-wide">Import
-                                Image</button>
+                            <button id="eh-btnImportImage" type="button" class="clr-primary btn-wide">
+                                <i class="fas fa-upload"></i> Import Image
+                            </button>
                             <input type="file" id="eh-fileSelector" style="display: none;">
                             <div class="div-image-container">
                                 <img id="eh-imgSource" />
@@ -41,20 +41,22 @@
                     </div>
                     <div class="card">
                         <div class="card-header">
-                            <span class="icon">🔧</span>
-                            Settings
+                            <i class="fas fa-cog"></i> &nbsp; Settings
                         </div>
                         <div class="card-body">
                             <fieldset>
                                 <legend>
-                                    <span class="info">🛈<span class="tooltip">
+                                    <span class="info">
+                                        <i class="fas fa-info-circle"></i>
+                                        <span class="tooltip">
                                             Determines the resolution of the source image. The initial size will be
                                             auto-selected when an image is loaded.<br><br>
                                             64 &nbsp; = &nbsp; 64 x 64 canvas<br>
                                             128 &nbsp; = &nbsp; 128 x 128 canvas<br>
                                             256 &nbsp; = &nbsp; 256 x 256 canvas<br>
                                             512 &nbsp; = &nbsp; 512 x 512 canvas
-                                        </span></span>
+                                        </span>
+                                    </span>
                                     Source Image Resize
                                 </legend>
                                 <div>
@@ -82,11 +84,14 @@
                             </fieldset>
                             <fieldset>
                                 <legend>
-                                    <span class="info">🛈<span class="tooltip">
+                                    <span class="info">
+                                        <i class="fas fa-info-circle"></i>
+                                        <span class="tooltip">
                                             Determines if smoothing is applied when resizing source images.<br><br>
                                             On &nbsp; = &nbsp; Smoother appearance &nbsp; (antialiasing)<br>
                                             Off &nbsp; = &nbsp; Sharper / jagged appearance
-                                        </span></span>
+                                        </span>
+                                    </span>
                                     Resize Smoothing
                                 </legend>
                                 <div>
@@ -104,13 +109,16 @@
                             </fieldset>
                             <fieldset>
                                 <legend>
-                                    <span class="info">🛈<span class="tooltip">
+                                    <span class="info">
+                                        <i class="fas fa-info-circle"></i>
+                                        <span class="tooltip">
                                             Determines the colour mode used when creating the emblem.<br><br>
                                             Low &nbsp; = &nbsp; Reduced colour palette &nbsp; (smaller server request
                                             size)<br>
                                             Full &nbsp; = &nbsp; The full colours from the source image &nbsp; (larger
                                             server request size)
-                                        </span></span>
+                                        </span>
+                                    </span>
                                     Colour Mode
                                 </legend>
                                 <div>
@@ -127,7 +135,9 @@
                             </fieldset>
                             <fieldset>
                                 <legend>
-                                    <span class="info">🛈<span class="tooltip">
+                                    <span class="info">
+                                        <i class="fas fa-info-circle"></i>
+                                        <span class="tooltip">
                                             Determines the emblem creation method. Depending on the visual elements of
                                             the source image, either rows or columns will result in a smaller server
                                             request size.<br><br>
@@ -137,7 +147,8 @@
                                             Columns &nbsp; = &nbsp; Vertical<br><br>
                                             The Auto option finds the best method each time but may take longer to
                                             process larger images on some computers.
-                                        </span></span>
+                                        </span>
+                                    </span>
                                     SVG Creation Method
                                 </legend>
                                 <div>
@@ -158,7 +169,9 @@
                             </fieldset>
                             <fieldset>
                                 <legend>
-                                    <span class="info">🛈<span class="tooltip">
+                                    <span class="info">
+                                        <i class="fas fa-info-circle"></i>
+                                        <span class="tooltip">
                                             Determines the amount of decimal places used for elements of the emblem
                                             SVG.<br><br>
                                             Low &nbsp; = &nbsp; 3 &nbsp; (recommended)<br>
@@ -166,7 +179,8 @@
                                             High &nbsp; = &nbsp; 5<br><br>
                                             Only increase this setting if there is visible tearing in the emblem (lines
                                             present between the colours).
-                                        </span></span>
+                                        </span>
+                                    </span>
                                     Decimal Precision
                                 </legend>
                                 <div>
@@ -185,15 +199,14 @@
                                     </label>
                                 </div>
                             </fieldset>
-                            <button disabled id="eh-btnProcessImage" type="button" class="clr-inactive btn-wide">Create
-                                Emblem</button>
+                            <button disabled id="eh-btnProcessImage" type="button" class="clr-inactive btn-wide">
+                                <i class="fas fa-image"></i> Create Emblem
+                            </button>
                         </div>
                     </div>
                 </div>
                 <!-- LEFT COLUMN END -->
-
                 <!-- MIDDLE COLUMN START -->
-                <!-- Middle column -->
                 <div class="column middle">
                     <div class="column-content">
                         <div class="div-svg-container">
@@ -202,24 +215,15 @@
                             </div>
                         </div>
                         <div id="eh-divInfo" class="div-info clr-inactive">⠀</div>
-                        <!-- GitHub button row -->
-                        <div class="row">
-                            <div class="column-content" style="margin-top: 16px;">
-                                <button
-                                    onclick="window.open('https://github.com/apex4710/crew-emblem-creator', '_blank')"
-                                    class="clr-primary btn-wide">View on GitHub</button>
-                            </div>
-                        </div>
                     </div>
                 </div>
-
                 <!-- MIDDLE COLUMN END -->
-
                 <!-- RIGHT COLUMN START -->
                 <div class="column right">
                     <div class="column-content">
-                        <button disabled id="eh-btnCreateCode" type="button" class="clr-inactive btn-wide">Generate
-                            Code</button>
+                        <button disabled id="eh-btnCreateCode" type="button" class="clr-inactive btn-wide">
+                            <i class="fas fa-code"></i> Generate Code
+                        </button>
                         <textarea id="eh-txtConsoleCode" class="textarea" readonly></textarea>
                         <div class="div-info div-mobile">
                             <strong>Note for mobile users:</strong><br>
@@ -235,12 +239,22 @@
                             <strong>Note:</strong><br>
                             The emblem will look better in-game.
                         </div>
-                        <button disabled id="eh-btnCopyCode" type="button" class="clr-inactive btn-wide">Copy
-                            Code</button>
+                        <button disabled id="eh-btnCopyCode" type="button" class="clr-inactive btn-wide">
+                            <i class="fas fa-copy"></i> Copy Code
+                        </button>
                     </div>
                 </div>
                 <!-- RIGHT COLUMN END -->
 
+                <!-- GitHub button row -->
+                <div class="row">
+                    <div class="column-content" style="margin-top: 16px;">
+                        <button onclick="window.open('https://github.com/apex4710/crew-emblem-creator', '_blank')"
+                            class="clr-primary btn-wide">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

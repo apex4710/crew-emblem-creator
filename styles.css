@@ -126,39 +126,46 @@ input:focus, select:focus {
 
 /* Header */
 .header {
-  background-color: #2c2f33;
-  padding: 30px 20px; /* Adjusted padding for better proportion */
+  background: linear-gradient(135deg, #2c2f33, #23272a);
+  padding: 40px 20px;
   text-align: center;
   color: #eaeaea;
-  font-size: 2.2em; /* Adjusted font size */
-  font-weight: 700; /* Slightly reduced weight for a cleaner look */
-  font-family: "Poppins", sans-serif; /* Modern font */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-bottom: 2px solid #00aaff;
-  margin-bottom: 30px; /* Added margin for space below the header */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  border-bottom: 3px solid #00aaff;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
 }
 
-/* Subtle Gradient Text */
+.header::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0, 170, 255, 0.1) 0%, rgba(0, 170, 255, 0) 70%);
+  animation: pulse 8s ease-in-out infinite;
+}
+
 .header h1 {
+  font-size: 2.5em;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
   background: linear-gradient(135deg, #00aaff, #0078d7);
-  -ms-background-clip: text;
   -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -o-background-clip: text;
   background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); /* Softer text shadow for depth */
+  color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1;
 }
 
-/* Animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+@keyframes pulse {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-25%, -25%) scale(1.5); }
 }
+
 
 /* Fieldsets */
 fieldset {
@@ -206,14 +213,14 @@ legend {
   margin-top: 8px;
   position: absolute;
   z-index: 1000000;
-  background: rgba(41, 41, 41, 0.792);
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: rgba(44, 62, 80, 0.95);
+  border: 1px solid #3498db;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   font-size: small;
   line-height: 1.4;
   max-width: 512px;
   padding: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px) saturate(180%);
   top: 10px;
   left: 0px;
@@ -290,7 +297,7 @@ legend {
 }
 
 .card-header .icon {
-  margin-right: 8px;
+  margin-right: 12px;
   color: #00aaff;
   font-size: 1.5em;
 }
@@ -380,16 +387,17 @@ button {
 }
 
 button:hover:enabled {
-  background: linear-gradient(135deg, #005f9e, #003f6f);
-  transform: scale(1.05);
+  background: linear-gradient(135deg, #0088f7, #006fbe);
+  transform: translateY(-2px);
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2), 0 8px 10px rgba(0, 0, 0, 0.3);
 }
 
 button:active:enabled {
   background: linear-gradient(135deg, #003f6f, #002f4f);
-  transform: scale(1);
+  transform: translateY(1px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 
 button:disabled, button:disabled:hover {
   color: #aaa;
@@ -446,11 +454,11 @@ button:disabled, button:disabled:hover {
 }
 .left, .right {
   width: 100%; /* Full width for columns on smaller screens */
-  box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.347);
   padding: 20px;
   border-radius: 8px;
   margin-bottom: 20px; /* Add margin for spacing */
-  background-color: #2c2f33;
+  background-color: #222528;
   transition: background-color 0.5s ease-in-out;
   backdrop-filter: blur(10px);
 }
@@ -565,7 +573,12 @@ button.clr-primary {
   max-width: 100%; /* Scale the width to fit the container */
   max-height: 100%; /* Scale the height to fit the container */
   object-fit: contain; /* Ensure the image is contained within the container */
+  transition: all 0.3s ease-in-out; /* Smooth transition for image loading */
   margin: auto;
+}
+
+.div-svg-image:hover {
+  transform: scale(1.02); /* Slightly scale the image on hover */
 }
 
 /* Textarea */
@@ -607,9 +620,14 @@ textarea[readonly] {
     width: 20%;
   }
 
+  .row {
+    flex-direction: column;
+  }
+
   .column {
     flex: 1; /* Ensure columns are even */
-    margin-bottom: 0; /* Remove bottom margin for columns on larger screens */
+    width: 100%; /* Full width for columns on larger screens */
+    margin-bottom: 20px; /* Add margin for spacing between columns */
   }
 
   .div-svg-container {
