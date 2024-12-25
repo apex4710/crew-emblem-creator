@@ -17,24 +17,34 @@
             <h1>GTA Online Crew Emblem Creator</h1>
         </header>
         <!-- HEADER END -->
+
         <div class="main-content">
-            <div class="sidebar">
+            <div class="row">
                 <!-- LEFT COLUMN START -->
                 <div class="column left">
-                    <div class="column-content">
-                        <button id="eh-btnImportImage" type="button" class="clr-primary btn-wide">Import Image</button>
-                        <input type="file" id="eh-fileSelector" style="display: none;">
-                        <div>
-                            <fieldset style="border-color: #242424;">
-                                <div class="div-image-container">
-                                    <img id="eh-imgSource" />
-                                </div>
-                                <div class="div-status">
-                                    <span class="status-text" id="eh-lblStatus">NO IMAGE</span>
-                                </div>
-                            </fieldset>
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="icon">📁</span>
+                            Import Image
                         </div>
-                        <div>
+                        <div class="card-body">
+                            <button id="eh-btnImportImage" type="button" class="clr-primary btn-wide">Import
+                                Image</button>
+                            <input type="file" id="eh-fileSelector" style="display: none;">
+                            <div class="div-image-container">
+                                <img id="eh-imgSource" />
+                            </div>
+                            <div class="div-status">
+                                <span class="status-text" id="eh-lblStatus">NO IMAGE</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="icon">🔧</span>
+                            Settings
+                        </div>
+                        <div class="card-body">
                             <fieldset>
                                 <legend>
                                     <span class="info">🛈<span class="tooltip">
@@ -119,17 +129,14 @@
                                 <legend>
                                     <span class="info">🛈<span class="tooltip">
                                             Determines the emblem creation method. Depending on the visual elements of
-                                            the
-                                            source image, either rows or columns will result in a smaller server request
-                                            size.<br><br>
+                                            the source image, either rows or columns will result in a smaller server
+                                            request size.<br><br>
                                             Auto &nbsp; = &nbsp; Horizontal & Vertical are calculated and the smallest
-                                            is
-                                            selected &nbsp; (slower)<br>
+                                            is selected &nbsp; (slower)<br>
                                             Rows &nbsp; = &nbsp; Horizontal<br>
                                             Columns &nbsp; = &nbsp; Vertical<br><br>
                                             The Auto option finds the best method each time but may take longer to
-                                            process
-                                            larger images on some computers.
+                                            process larger images on some computers.
                                         </span></span>
                                     SVG Creation Method
                                 </legend>
@@ -184,33 +191,20 @@
                     </div>
                 </div>
                 <!-- LEFT COLUMN END -->
-            </div>
-            <!-- SIDEBAR END -->
-            <div class="content">
+
                 <!-- MIDDLE COLUMN START -->
+                <!-- Middle column -->
                 <div class="column middle">
                     <div class="column-content">
                         <div class="div-svg-container">
-                            <div class="div-svg-image">
-                                <svg width="512" height="512">
-                                    <defs>
-                                        <pattern id="checkerDark" x="0" y="0" width="16" height="16"
-                                            patternUnits="userSpaceOnUse">
-                                            <rect x="0" y="0" width="8" height="8" fill="#46494E"></rect>
-                                            <rect x="0" y="8" width="8" height="8" fill="#777672"></rect>
-                                            <rect x="8" y="0" width="8" height="8" fill="#777672"></rect>
-                                            <rect x="8" y="8" width="8" height="8" fill="#46494E"></rect>
-                                        </pattern>
-                                    </defs>
-                                    <rect x="0" y="0" width="100%" height="100%" fill="url(#checkerDark)"></rect>
-                                </svg>
+                            <div class="div-svg-image" id="eh-svgPreview">
+                                <!-- SVG Preview -->
                             </div>
-                            <div class="div-svg-image" id="eh-svgPreview"></div>
                         </div>
                         <div id="eh-divInfo" class="div-info clr-inactive">⠀</div>
-                        <!-- NEW ROW FOR GITHUB BUTTON -->
+                        <!-- GitHub button row -->
                         <div class="row">
-                            <div class="column-content" style="text-align: center; margin-top: 16px;">
+                            <div class="column-content" style="margin-top: 16px;">
                                 <button
                                     onclick="window.open('https://github.com/apex4710/crew-emblem-creator', '_blank')"
                                     class="clr-primary btn-wide">View on GitHub</button>
@@ -218,7 +212,9 @@
                         </div>
                     </div>
                 </div>
+
                 <!-- MIDDLE COLUMN END -->
+
                 <!-- RIGHT COLUMN START -->
                 <div class="column right">
                     <div class="column-content">

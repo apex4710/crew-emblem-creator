@@ -741,7 +741,7 @@ class emblemHelper {
     let _layerData = btoa(JSON.stringify(this.layers));
     //  Create the request.
     let _consoleCode =
-      "// Generated with EmblemHelper v1.1 modified by APEX4710 \n\n";
+      "// Generated with EmblemHelper v2.0 modified by APEX \n\n";
     _consoleCode += 'var svgData = "' + _svgData + '";\n\n';
     _consoleCode += 'var layerData = "' + _layerData + '";\n\n';
     _consoleCode +=
@@ -819,29 +819,32 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   // Create Emblem button clicked: check the selected options and process the image.
+  // Create Emblem button clicked: check the selected options and process the image
   document.getElementById("eh-btnProcessImage").onclick = () => {
-    // Disable the Create Code button.
+    console.log("Processing Emblem");
+
+    // Disable the Create Code button
     setClass("eh-btnCreateCode", "btn-wide clr-inactive");
     disableElement("eh-btnCreateCode");
 
-    // Disable the Copy Code button.
+    // Disable the Copy Code button
     setClass("eh-btnCopyCode", "btn-wide clr-inactive");
     disableElement("eh-btnCopyCode");
 
-    // Clear the console code text area.
+    // Clear the console code text area
     document.getElementById("eh-txtConsoleCode").value = "";
 
-    // Create a new Emblem Helper object.
+    // Create a new Emblem Helper object
     EH = new emblemHelper();
 
-    // Get the selected source image canvas size.
+    // Get the selected source image canvas size
     let _resize = 64;
     const _optionResize = document.getElementsByName("eh-optSourceSize");
     for (let i = 0; i < _optionResize.length; i++) {
       if (_optionResize[i].checked) _resize = Number(_optionResize[i].value);
     }
 
-    // Get the selected decimal precision.
+    // Get the selected decimal precision
     let _precision = 3;
     const _optionAccuracy = document.getElementsByName("eh-optAccuracy");
     for (let i = 0; i < _optionAccuracy.length; i++) {
@@ -849,28 +852,28 @@ document.addEventListener("DOMContentLoaded", () => {
         _precision = Number(_optionAccuracy[i].value);
     }
 
-    // Set the decimal precision in the Emblem Helper object.
+    // Set the decimal precision in the Emblem Helper object
     EH.setAccuracy(_precision);
 
-    // Get the selected smoothing mode (on/off).
+    // Get the selected smoothing mode (on/off)
     document.getElementById("eh-optOn").checked
       ? EH.useSmoothing(true)
       : EH.useSmoothing(false);
 
-    // Get the selected colour mode (low/full).
+    // Get the selected colour mode (low/full)
     document.getElementById("eh-optLow").checked
       ? EH.useLowColour(true)
       : EH.useLowColour(false);
 
     const _sourceImage = document.getElementById("eh-imgSource").src;
 
-    // Create the emblem using the selected method (auto/rows/columns).
+    // Create the emblem using the selected method (auto/rows/columns)
     if (document.getElementById("eh-optRows").checked) {
       EH.createEmblem(_sourceImage, true, _resize);
     } else if (document.getElementById("eh-optColumns").checked) {
       EH.createEmblem(_sourceImage, false, _resize);
     } else if (document.getElementById("eh-optAuto").checked) {
-      // NOTE: Inefficient. Needs work.
+      // NOTE: Inefficient. Needs work
       EH.createEmblem(_sourceImage, false, _resize);
       const _lengthColumns = EH.encodedLength;
       EH.createEmblem(_sourceImage, true, _resize);
@@ -879,30 +882,36 @@ document.addEventListener("DOMContentLoaded", () => {
         EH.createEmblem(_sourceImage, false, _resize);
     }
 
-    // Display the emblem SVG preview.
+    // Display the emblem SVG preview
     document.getElementById("eh-svgPreview").innerHTML = "";
     document.getElementById("eh-svgPreview").appendChild(EH.svg.getSVG());
 
-    // Check the size of the resulting emblem.
+    // Check the size of the resulting emblem
     if (EH.encodedLength < EH.maxEncodedLength) {
-      // The emblem is small enough to upload.
+      // The emblem is small enough to upload
       setClass("eh-divInfo", "div-info clr-success");
       document.getElementById("eh-divInfo").innerHTML =
         "OK:&nbsp;&nbsp;&nbsp; " +
         numberWithCommas(EH.encodedLength) +
         "&nbsp;&nbsp;/&nbsp;&nbsp;" +
         numberWithCommas(EH.maxEncodedLength);
-      // Enable the Create Code button.
+      // Enable the Create Code button
       setClass("eh-btnCreateCode", "btn-wide clr-primary");
       enableElement("eh-btnCreateCode");
+
+      console.log(
+        "Success: " + document.getElementById("eh-divInfo").className
+      );
     } else {
-      // The emblem is too large to upload.
+      // The emblem is too large to upload
       setClass("eh-divInfo", "div-info clr-danger");
       document.getElementById("eh-divInfo").innerHTML =
         "Too Expensive:&nbsp;&nbsp;&nbsp; " +
         numberWithCommas(EH.encodedLength) +
         "&nbsp;&nbsp;/&nbsp;&nbsp;" +
         numberWithCommas(EH.maxEncodedLength);
+
+      console.log("Danger: " + document.getElementById("eh-divInfo").className);
     }
   };
 
