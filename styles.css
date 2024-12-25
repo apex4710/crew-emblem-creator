@@ -551,13 +551,18 @@ button.clr-primary {
   min-height: 512px;
   position: relative;
   transition: all 0.5s ease-in-out;
+  overflow: hidden; /* Ensure content doesn't overflow the container */
 }
+
+/* Center and contain the SVG within the container */
 .div-svg-image {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%); /* Center the SVG within the container */
-} /* Status Text Colors */
+  max-width: 100%; /* Scale the width to fit the container */
+  max-height: 100%; /* Scale the height to fit the container */
+  object-fit: contain; /* Ensure the image is contained within the container */
+  margin: auto;
+}
+
+/* Status Text Colors */
 .status-text {
   text-align: center;
   font-size: small;
@@ -573,6 +578,14 @@ button.clr-primary {
   margin-top: 16px;
   display: inline-block;
 }
+
+.div-svg-container {
+  margin: 8px;
+  min-height: 512px;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+}
+
 .textarea {
   display: block;
   width: 100%;
@@ -596,15 +609,8 @@ textarea[readonly] {
   color: #eaeaea; /* Text color */
   border: 1px solid #444; /* Border color */
   cursor: not-allowed; /* Change cursor to indicate non-editable */
-  user-select: text; /* Allow text selection for other browsers */
-  -webkit-user-select: text; /* Allow text selection for Safari and iOS */
-}
-
-.div-svg-container {
-  margin: 8px;
-  min-height: 512px;
-  position: relative;
-  transition: all 0.5s ease-in-out;
+  -webkit-user-select: text; /* Allow text selection for other browsers */
+  user-select: text; /* Allow text selection for Safari and iOS */
 }
 
 .div-info.clr-success {
@@ -637,5 +643,20 @@ textarea[readonly] {
   .column {
     flex: 1; /* Ensure columns are even */
     margin-bottom: 0; /* Remove bottom margin for columns on larger screens */
+  }
+
+  .div-svg-container {
+    margin: 8px;
+    height: auto; /* Adjust height to auto for flexibility */
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden; /* Ensure content doesn't overflow the container */
+  }
+
+  .div-svg-image {
+    max-width: 100%; /* Scale the width to fit the container */
+    max-height: 100%; /* Scale the height to fit the container */
+    object-fit: contain; /* Ensure the image is contained within the container */
+    margin: auto;
   }
 }
