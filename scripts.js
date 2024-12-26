@@ -813,12 +813,14 @@ document.addEventListener("DOMContentLoaded", () => {
   // Define EH in a broader scope.
   let EH;
 
+  // Debugging information
+  console.log("EH:", EH);
+
   // Import Image button clicked: trigger the file select dialog.
   document.getElementById("eh-btnImportImage").onclick = () => {
     document.getElementById("eh-fileSelector").click();
   };
 
-  // Create Emblem button clicked: check the selected options and process the image.
   // Create Emblem button clicked: check the selected options and process the image
   document.getElementById("eh-btnProcessImage").onclick = () => {
     console.log("Processing Emblem");
@@ -846,8 +848,8 @@ document.addEventListener("DOMContentLoaded", () => {
     requestAnimationFrame(() => {
       setTimeout(() => {
         try {
-          // Create a new Emblem Helper object
-          const EH = new emblemHelper();
+          // Initialize the Emblem Helper object
+          EH = new emblemHelper();
 
           // Get the selected source image canvas size
           let _resize = 64;
@@ -943,10 +945,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Create Code button clicked: display the console code.
   document.getElementById("eh-btnCreateCode").onclick = () => {
-    document.getElementById("eh-txtConsoleCode").value = EH.getConsoleCode();
-    // Enable the Copy Code button.
-    setClass("eh-btnCopyCode", "btn-wide clr-primary");
-    enableElement("eh-btnCopyCode");
+    if (EH && typeof EH.getConsoleCode === "function") {
+      document.getElementById("eh-txtConsoleCode").value = EH.getConsoleCode();
+      // Enable the Copy Code button.
+      setClass("eh-btnCopyCode", "btn-wide clr-primary");
+      enableElement("eh-btnCopyCode");
+    } else {
+      console.error("EH object or getConsoleCode method is not available.");
+    }
   };
 
   // Copy Code button clicked: copy the code to the clipboard.
@@ -961,3 +967,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 2000);
   };
 });
+
+// Check if the script is loaded
+console.log("Script loaded successfully");
