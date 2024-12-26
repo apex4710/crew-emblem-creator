@@ -1,4 +1,3 @@
-
 /* Prettier Ignore */
 
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
@@ -20,27 +19,25 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.5em;
 }
 
-h1 { font-size: 2.5em; }
-h2 { font-size: 2em; }
-h3 { font-size: 1.75em; }
-h4 { font-size: 1.5em; }
-h5 { font-size: 1.25em; }
-h6 { font-size: 1em; }
-
-
-
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem; }
 
 /* Body Style */
 body {
-  line-height: 1;
+  line-height: 1.5;
   font-family: "Source Sans Pro", Helvetica, sans-serif;
   color: #eaeaea;
   background: linear-gradient(to bottom, #1a2a3a, #000000);
 }
+
 html, body {
-  margin: 0px;
+  margin: 0;
   height: 100%;
-  background-color: #23272a; /* Updated background color */
+  background-color: #23272a;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   font-family: "Source Sans Pro", Helvetica, sans-serif;
@@ -147,7 +144,7 @@ input:focus, select:focus {
 /* Header */
 .header {
   background: linear-gradient(135deg, #2c2f33, #23272a);
-  padding: 40px 20px;
+  padding: 2.5rem 1.25rem;
   text-align: center;
   color: #eaeaea;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -169,7 +166,7 @@ input:focus, select:focus {
 }
 
 .header h1 {
-  font-size: 2.5em;
+  font-size: 2.5rem;
   font-weight: 700;
   font-family: "Poppins", sans-serif;
   background: linear-gradient(135deg, #00aaff, #0078d7);
@@ -186,14 +183,13 @@ input:focus, select:focus {
   50% { transform: translate(-25%, -25%) scale(1.5); }
 }
 
-
 /* Fieldsets */
 fieldset {
   border: 2px solid #00aaff;
-  padding: 8px;
+  padding: 0.5rem;
   border-radius: 8px;
-  max-width: 512px;
-  margin: 20px auto;
+  max-width: 100%;
+  margin: 1.25rem auto;
   position: relative;
   overflow: visible;
 }
@@ -201,9 +197,9 @@ fieldset {
 legend {
   color: #00aaff;
   cursor: default;
-  font-size: medium;
+  font-size: 1rem;
   font-weight: 600;
-  padding: 0 8px;
+  padding: 0 0.5rem;
   text-align: left;
   text-shadow: 1px 1px 2px #1e1e1e;
 }
@@ -219,9 +215,9 @@ legend {
 
 .info {
   cursor: help;
-  font-size: large;
+  font-size: 1.25rem;
   font-weight: 400;
-  margin-right: 4px;
+  margin-right: 0.25rem;
   color: #ff6f61;
 }
 
@@ -229,21 +225,21 @@ legend {
   animation: fade 0.5s;
   display: none;
   color: #fff;
-  margin-left: 8px;
-  margin-top: 8px;
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
   position: absolute;
   z-index: 1000000;
   background: rgba(44, 62, 80, 0.95);
   border: 1px solid #3498db;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
-  font-size: small;
+  font-size: 0.875rem;
   line-height: 1.4;
-  max-width: 512px;
-  padding: 12px;
+  max-width: 32rem;
+  padding: 0.75rem;
   backdrop-filter: blur(10px) saturate(180%);
-  top: 10px;
-  left: 0px;
+  top: 0.625rem;
+  left: 0;
 }
 
 @keyframes fade {
@@ -292,39 +288,39 @@ legend {
   background: #2c2f33;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  margin-bottom: 20px;
-  padding: 16px;
+  margin-bottom: 1.25rem;
+  padding: 1rem;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-0.3125rem);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 /* Consistent Padding */
 .card-content {
-  padding: 16px;
+  padding: 1rem;
 }
 
 /* Icons */
 .card-header {
   display: flex;
   align-items: center;
-  font-size: 1.25em;
+  font-size: 1.25rem;
   font-weight: bold;
   color: #00aaff;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 
 .card-header .icon {
-  margin-right: 12px;
+  margin-right: 0.75rem;
   color: #00aaff;
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 .card-body {
-  padding: 8px 0;
+  padding: 0.5rem 0;
   color: #eaeaea;
 }
 
@@ -346,12 +342,12 @@ input:focus, select:focus {
 
 /* Styled Radio Buttons */
 .l-radio {
-  padding: 6px;
+  padding: 0.375rem;
   border-radius: 50px;
   display: inline-flex;
   cursor: pointer;
   transition: background 0.3s ease;
-  margin: 6px 0;
+  margin: 0.375rem 0;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -361,12 +357,12 @@ input:focus, select:focus {
 
 .l-radio input {
   vertical-align: middle;
-  width: 20px;
-  height: 20px;
-  border-radius: 10px;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
   background: none;
   border: 0;
-  box-shadow: inset 0 0 0 4px #cccccc;
+  box-shadow: inset 0 0 0 0.25rem #cccccc;
   appearance: none;
   padding: 0;
   margin: 0;
@@ -379,14 +375,14 @@ input:focus, select:focus {
 }
 
 .l-radio input:checked {
-  box-shadow: inset 0 0 0 16px #4caf50;
+  box-shadow: inset 0 0 0 1rem #4caf50;
 }
 
 .l-radio span {
   vertical-align: middle;
   display: inline-block;
-  line-height: 20px;
-  padding: 0 8px;
+  line-height: 1.25rem;
+  padding: 0 0.5rem;
   font-weight: 500;
   color: #eaeaea;
 }
@@ -395,12 +391,12 @@ input:focus, select:focus {
 button {
   border-radius: 50px;
   outline: none;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: bold;
   color: #fff;
   background: linear-gradient(135deg, #0078d7, #005f9e);
-  padding: 14px 28px;
-  margin: 10px 0px;
+  padding: 0.875rem 1.75rem;
+  margin: 0.625rem 0;
   transition: all 0.4s ease;
   box-shadow: 0 0 10px rgba(0, 120, 215, 0.5);
   backdrop-filter: saturate(180%) blur(10px);
@@ -409,16 +405,15 @@ button {
 
 button:hover:enabled {
   background: linear-gradient(135deg, #0088f7, #006fbe);
-  transform: translateY(-2px);
+  transform: translateY(-0.125rem);
   box-shadow: 0 0 15px rgba(0, 120, 215, 0.7);
 }
 
 button:active:enabled {
   background: linear-gradient(135deg, #003f6f, #002f4f);
-  transform: translateY(1px);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(0.0625rem);
+  box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1);
 }
-
 
 button:disabled, button:disabled:hover {
   color: #aaa;
@@ -428,17 +423,16 @@ button:disabled, button:disabled:hover {
   cursor: not-allowed;
 }
 
-
 .loading-spinner {
-  width: 50px;
-  height: 50px;
-  border: 5px solid rgba(243, 243, 243, 0.6); /* Semi-transparent background */
-  border-top: 5px solid #00aaff; /* Highlight color for the spinner */
+  width: 3.125rem;
+  height: 3.125rem;
+  border: 0.3125rem solid rgba(243, 243, 243, 0.6);
+  border-top: 0.3125rem solid #00aaff;
   border-radius: 50%;
-  animation: spin 1s cubic-bezier(0.4, 0.0, 0.2, 1) infinite; /* Smoother animation */
-  margin: auto; /* Center horizontally */
-  display: block; /* Make sure it's block-level */
-  position: relative; /* To allow for precise positioning */
+  animation: spin 1s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+  margin: auto;
+  display: block;
+  position: relative;
 }
 
 @keyframes spin {
@@ -449,7 +443,6 @@ button:disabled, button:disabled:hover {
     transform: rotate(360deg);
   }
 }
-
 
 /* Color Classes */
 .clr-inactive {
@@ -477,72 +470,85 @@ button:disabled, button:disabled:hover {
   color: #fff;
 }
 
+/* General Box-Sizing */ 
+*,
+*::before, 
+*::after { 
+  box-sizing: border-box; 
+}
+
 /* Containers */
 .container {
   width: 100%;
+  max-width: 100%; /* Ensure the container does not exceed 100% of the viewport width */
   height: 100%;
 }
 
 .row {
   display: flex;
-  flex-wrap: wrap; /* Allow row to wrap on smaller screens */
-  justify-content: center; /* Centers items horizontally */
+  flex-wrap: wrap;
+  width: 100%; max-width: 100%; /* Ensure the row does not exceed 100% of the viewport width */
+  justify-content: center;
   transition: all 0.5s ease-in-out;
 }
 
 .column {
-  flex: 1 1 100%; /* Allow column to take full width on smaller screens */
+  flex: 1 1 100%;
   min-height: 100%;
   transition: all 0.5s ease-in-out;
-  margin-bottom: 20px; /* Add margin for spacing between columns */
+  margin-bottom: 1.25rem;
+  max-width: 100%; /* Ensure the column does not exceed 100% of the viewport width */ 
 }
 .left, .right {
-  width: 100%; /* Full width for columns on smaller screens */
+  width: 100%;
   box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.347);
-  padding: 20px;
+  padding: 1.25rem;
   border-radius: 8px;
-  margin-bottom: 20px; /* Add margin for spacing */
+  margin-bottom: 1.25rem;
   background-color: #222528;
   transition: background-color 0.5s ease-in-out;
   backdrop-filter: blur(10px);
+  max-width: 100%; /* Ensure the column does not exceed 100% of the viewport width */ 
 }
 
 .middle {
-  width: 100%; /* Full width for columns on smaller screens */
-  padding: 20px;
-  margin-bottom: 20px; /* Add margin for spacing */
-  background-color: #23272a; /* Same color as the page background */
+  width: 100%;
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+  background-color: #23272a;
   transition: background-color 0.5s ease-in-out;
 }
 
 .column-content {
   display: flex;
-  flex-direction: column; /* Stacks children vertically */
-  justify-content: center; /* Centers items vertically within the column */
-  align-items: center; /* Centers items horizontally within the column */
-  padding: 16px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
   height: auto;
   color: #eaeaea;
   transition: all 0.5s ease-in-out;
 }
 
 button.clr-primary {
-  margin: 0 auto; /* Ensures the button itself is centered */
+  margin: 0 auto;
 }
 
 /* Image Preview Container */
 .div-image-container {
   position: relative;
-  width: 64px; /* Fixed size for the preview container */
-  height: 64px;
+  width: 4rem;
+  height: 4rem;
   background-color: rgba(40, 44, 52, 0.8);
   background-position: center;
   background-size: cover;
-  margin: 16px auto;
+  margin: 1rem auto;
   text-align: center;
   border-radius: 8px;
   backdrop-filter: blur(10px);
+  max-width: 100%; /* Ensure the column does not exceed 100% of the viewport width */ 
 }
+
 .div-image-container img {
   position: absolute;
   left: 0;
@@ -551,28 +557,28 @@ button.clr-primary {
   bottom: 0;
   display: block;
   margin: auto;
-  max-width: 64px; /* Ensure the image fits within the container */
-  max-height: 64px;
+  max-width: 4rem;
+  max-height: 4rem;
   text-align: center;
 }
 
 /* Information Box */
 .div-info {
   border-radius: 8px;
-  padding: 10px 20px;
-  margin: 18px auto;
-  max-width: 512px;
+  padding: 0.625rem 1.25rem;
+  margin: 1.125rem auto;
+  max-width: 32rem;
   background-color: rgba(40, 44, 52, 0.8);
   box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
   transition: all 0.5s ease-in-out;
   text-align: center;
-  font-size: small;
+  font-size: 0.875rem;
   font-weight: 600;
   color: #fff;
 }
 .div-info strong {
-  color: #00aaff; /* Highlight the important text */
+  color: #00aaff;
 }
 .div-info.clr-success {
   background-color: #4caf50;
@@ -585,72 +591,73 @@ button.clr-primary {
 
 /* Status Text Colors */
 .div-status {
-  padding-bottom: 8px;
+  padding-bottom: 0.5rem;
   align-items: center;
   justify-content: center;
 }
 .status-text {
   text-align: center;
-  font-size: small;
+  font-size: 0.875rem;
   font-weight: 600;
   color: #fff;
   transition: all 0.5s ease-in-out;
 }
 .div-svg-container .status-text {
-  background-color: #4caf50; /* Example color for success status */
+  background-color: #4caf50;
   color: #fff;
-  padding: 8px 12px;
+  padding: 0.5rem 0.75rem;
   border-radius: 4px;
-  margin-top: 16px;
+  margin-top: 1rem;
   display: inline-block;
 }
 
 /* SVG Preview Container */
 .div-svg-container {
-  margin: 8px;
-  min-height: 512px;
+  margin: 0.5rem;
+  min-height: 32rem;
   position: relative;
   transition: all 0.5s ease-in-out;
-  overflow: hidden; /* Ensure content doesn't overflow the container */
+  overflow: hidden;
+  max-width: 100%; /* Ensure the column does not exceed 100% of the viewport width */ 
 }
 .div-svg-image {
-  max-width: 100%; /* Scale the width to fit the container */
-  max-height: 100%; /* Scale the height to fit the container */
-  object-fit: contain; /* Ensure the image is contained within the container */
-  transition: all 0.3s ease-in-out; /* Smooth transition for image loading */
-  box-shadow: 0 0 20px rgba(0, 170, 255, 0.3); /* Add shadow for depth */
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 20px rgba(0, 170, 255, 0.3);
   margin: auto;
 }
 
 .div-svg-image:hover {
-  transform: scale(1.02); /* Slightly scale the image on hover */
+  transform: scale(1.02);
 }
 
 /* Textarea */
 .textarea {
   display: block;
   width: 100%;
-  height: 512px;
-  padding: 0px;
-  border: 0px;
-  margin: 8px 0px;
+  height: 32rem;
+  padding: 0;
+  border: 0;
+  margin: 0.5rem 0;
   overflow-y: scroll;
   resize: both;
-  min-height: 40px;
-  line-height: 20px;
-  max-width: 512px;
+  min-height: 2.5rem;
+  line-height: 1.25rem;
+  max-width: 32rem;
   background-color: rgba(33, 37, 43, 0.8);
   color: #eaeaea;
   border-radius: 4px;
   backdrop-filter: blur(10px);
 }
 textarea[readonly] {
-  background-color: #333; /* Same as other inputs */
-  color: #eaeaea; /* Text color */
-  border: 1px solid #444; /* Border color */
-  cursor: not-allowed; /* Change cursor to indicate non-editable */
-  -webkit-user-select: text; /* Allow text selection for Safari and iOS */
-  user-select: text; /* Allow text selection for other browsers */
+  background-color: #333;
+  color: #eaeaea;
+  border: 1px solid #444;
+  cursor: not-allowed;
+  -webkit-user-select: text;
+  user-select: text;
 }
 
 /* Responsive Design */
@@ -670,23 +677,23 @@ textarea[readonly] {
   }
 
   .column {
-    flex: 1; /* Ensure columns are even */
-    width: 100%; /* Full width for columns on larger screens */
-    margin-bottom: 20px; /* Add margin for spacing between columns */
+    flex: 1;
+    width: 100%;
+    margin-bottom: 1.25rem;
   }
 
   .div-svg-container {
-    margin: 8px;
-    height: auto; /* Adjust height to auto for flexibility */
+    margin: 0.5rem;
+    height: auto;
     position: relative;
     transition: all 0.5s ease-in-out;
-    overflow: hidden; /* Ensure content doesn't overflow the container */
+    overflow: hidden;
   }
 
   .div-svg-image {
-    max-width: 100%; /* Scale the width to fit the container */
-    max-height: 100%; /* Scale the height to fit the container */
-    object-fit: contain; /* Ensure the image is contained within the container */
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
     margin: auto;
   }
 }
