@@ -169,7 +169,7 @@ input:focus, select:focus {
   font-size: 2.5rem;
   font-weight: 700;
   font-family: "Poppins", sans-serif;
-  background: linear-gradient(135deg, #00f2ff, #0a68b5bc);
+  background: linear-gradient(135deg, #00f2ff, #0a8ab5bc);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
