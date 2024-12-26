@@ -1,6 +1,7 @@
 
 /* Prettier Ignore */
 
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
   margin: 0;
@@ -12,12 +13,29 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
   background: transparent;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Orbitron', sans-serif;
+  color: #00aaff;
+  text-shadow: 0 0 5px rgba(0, 170, 255, 0.5);
+  margin-bottom: 0.5em;
+}
+
+h1 { font-size: 2.5em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.75em; }
+h4 { font-size: 1.5em; }
+h5 { font-size: 1.25em; }
+h6 { font-size: 1em; }
+
+
+
+
 /* Body Style */
 body {
   line-height: 1;
   font-family: "Source Sans Pro", Helvetica, sans-serif;
   color: #eaeaea;
-  background-color: #23272a; /* Updated default background color */
+  background: linear-gradient(to bottom, #1a2a3a, #000000);
 }
 html, body {
   margin: 0px;
@@ -57,8 +75,10 @@ a {
   background: transparent;
   color: #00aaff;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 a:hover {
+  color: #0078d7;
   text-decoration: underline;
 }
 
@@ -293,7 +313,8 @@ legend {
   align-items: center;
   font-size: 1.25em;
   font-weight: bold;
-  color: #eaeaea;
+  color: #00aaff;
+  margin-bottom: 10px;
 }
 
 .card-header .icon {
@@ -381,7 +402,7 @@ button {
   padding: 14px 28px;
   margin: 10px 0px;
   transition: all 0.4s ease;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px rgba(0, 120, 215, 0.5);
   backdrop-filter: saturate(180%) blur(10px);
   border: 2px solid rgba(255, 255, 255, 0.3);
 }
@@ -389,7 +410,7 @@ button {
 button:hover:enabled {
   background: linear-gradient(135deg, #0088f7, #006fbe);
   transform: translateY(-2px);
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2), 0 8px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 15px rgba(0, 120, 215, 0.7);
 }
 
 button:active:enabled {
@@ -406,6 +427,29 @@ button:disabled, button:disabled:hover {
   box-shadow: none;
   cursor: not-allowed;
 }
+
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(243, 243, 243, 0.6); /* Semi-transparent background */
+  border-top: 5px solid #00aaff; /* Highlight color for the spinner */
+  border-radius: 50%;
+  animation: spin 1s cubic-bezier(0.4, 0.0, 0.2, 1) infinite; /* Smoother animation */
+  margin: auto; /* Center horizontally */
+  display: block; /* Make sure it's block-level */
+  position: relative; /* To allow for precise positioning */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 
 /* Color Classes */
 .clr-inactive {
@@ -574,6 +618,7 @@ button.clr-primary {
   max-height: 100%; /* Scale the height to fit the container */
   object-fit: contain; /* Ensure the image is contained within the container */
   transition: all 0.3s ease-in-out; /* Smooth transition for image loading */
+  box-shadow: 0 0 20px rgba(0, 170, 255, 0.3); /* Add shadow for depth */
   margin: auto;
 }
 
