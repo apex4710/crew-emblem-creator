@@ -183,34 +183,45 @@ input:focus, select:focus {
   50% { transform: translate(-25%, -25%) scale(1.5); }
 }
 
-/* Fieldsets */
 fieldset { 
-  border: 2px solid #00aaff;
-  padding: 0.5rem; 
-  border-radius: 8px; 
+  border: none;
+  padding: 1rem; 
+  border-radius: 12px; 
   max-width: 100%; 
-  margin: 1.25rem auto; 
+  margin: 1.5rem auto; 
   position: relative; 
-  overflow: visible; 
+  overflow: visible;
+  background: linear-gradient(#2c2f33, #2c2f33) padding-box,
+              linear-gradient(135deg, #00aaff, #0066ff, #6600ff) border-box;
+  border: 3px solid transparent;
+  box-shadow: 0 6px 15px rgba(0, 170, 255, 0.1);
+  z-index: auto;
+  transform: none;
+}
+
+fieldset:hover {
+  margin-top: calc(1.5rem - 2px);
+  box-shadow: 10px 10px 20px rgba(0, 170, 255, 0.15);
 }
 
 legend {
   color: #00aaff;
   cursor: default;
-  font-size: 1rem;
-  font-weight: 600;
-  padding: 0 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 0 1rem;
   text-align: left;
-  text-shadow: 1px 1px 2px #1e1e1e;
+  text-shadow: 1px 1px 2px rgba(30, 30, 30, 0.3);
+  background: #2c2f33;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0, 170, 255, 0.1);
+  position: relative;
+  z-index: auto;
 }
 
-/* Enhanced Tooltip Design */
 .tooltip-container {
   position: relative;
-}
-
-.info:hover .tooltip {
-  display: block;
+  display: inline-block;
 }
 
 .info {
@@ -219,67 +230,65 @@ legend {
   font-weight: 400;
   margin-right: 0.25rem;
   color: #ff6f61;
+  transition: color 0.3s ease;
+}
+
+.info:hover {
+  color: #ff4f3f;
 }
 
 .tooltip {
-  animation: fade 0.5s;
-  display: none;
-  color: #fff;
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
   position: absolute;
-  z-index: 1000000;
-  background: rgba(44, 62, 80, 0.95);
-  border: 1px solid #3498db;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 999999;
+  color: #fff;
+  background: rgba(44, 62, 80, 0.75);
+  border: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   border-radius: 8px;
-  font-size: 0.875rem;
-  line-height: 1.4;
-  max-width: 32rem;
-  padding: 0.75rem;
-  backdrop-filter: blur(10px) saturate(180%);
-  top: 0.625rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  min-width: 200px;
+  max-width: 400px;
+  height: auto;
+  padding: 0.75rem 1rem;
+  display: none;
+  top: 100%;
   left: 0;
+  margin-top: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(
+    to bottom right,
+    rgba(44, 62, 80, 0.7),
+    rgba(44, 62, 80, 0.5)
+  );
+}
+
+
+/* Ensure the tooltip container is in the root stacking context */
+body > .tooltip-container {
+  position: static;
+}
+
+
+
+.info:hover .tooltip {
+  display: block;
+  animation: fade 0.3s ease-in-out;
 }
 
 @keyframes fade {
-  0% {
+  from {
     opacity: 0;
+    transform: translateY(-5px);
   }
-  100% {
+  to {
     opacity: 1;
-  }
-}
-@-moz-keyframes fade {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes fade {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@-o-keyframes fade {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@-ms-keyframes fade {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
+    transform: translateY(0);
   }
 }
 
