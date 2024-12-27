@@ -258,8 +258,8 @@ legend {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
   background: linear-gradient(
     135deg,
     rgba(13, 17, 23, 0.9),
