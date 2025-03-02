@@ -248,14 +248,14 @@ legend {
   border-radius: 8px;
   font-size: 0.9rem;
   line-height: 1.4;
-  min-width: 200px;
-  max-width: 350px;
+  min-width: 325px;
+  max-width: 375px;
   padding: 0.75rem 1rem;
   display: none;
   top: 100%;
   left: 0;
   margin-top: 8px;
-  white-space: nowrap;
+  white-space: normal;
   overflow: hidden;
   text-overflow: ellipsis;
   -webkit-backdrop-filter: blur(12px);
