@@ -231,6 +231,8 @@ legend {
   margin-right: 0.3rem;
   color: #00d4ff;
   transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
 }
 
 .info:hover {
@@ -248,8 +250,8 @@ legend {
   border-radius: 8px;
   font-size: 0.9rem;
   line-height: 1.4;
-  min-width: 325px;
-  max-width: 375px;
+  min-width: 355px;
+  max-width: 475px;
   padding: 0.75rem 1rem;
   display: none;
   top: 100%;
@@ -471,6 +473,11 @@ button:disabled, button:disabled:hover {
   margin-bottom: 1rem;
   max-width: 100%;
 }
+
+.column, .card {
+  overflow: visible;
+}
+
 
 .left, .right {
   width: 100%;

@@ -44,19 +44,19 @@
                             <i class="fas fa-cog"></i> &nbsp; Settings
                         </div>
                         <div class="card-body">
+                            <span class="info">
+                                <i class="fas fa-info-circle"></i>
+                                <span class="tooltip">
+                                    Determines the resolution of the source image. The initial size will be
+                                    auto-selected when an image is loaded.<br><br>
+                                    64 &nbsp; = &nbsp; 64 x 64 canvas<br>
+                                    128 &nbsp; = &nbsp; 128 x 128 canvas<br>
+                                    256 &nbsp; = &nbsp; 256 x 256 canvas<br>
+                                    512 &nbsp; = &nbsp; 512 x 512 canvas
+                                </span>
+                            </span>
                             <fieldset>
                                 <legend>
-                                    <span class="info">
-                                        <i class="fas fa-info-circle"></i>
-                                        <span class="tooltip">
-                                            Determines the resolution of the source image. The initial size will be
-                                            auto-selected when an image is loaded.<br><br>
-                                            64 &nbsp; = &nbsp; 64 x 64 canvas<br>
-                                            128 &nbsp; = &nbsp; 128 x 128 canvas<br>
-                                            256 &nbsp; = &nbsp; 256 x 256 canvas<br>
-                                            512 &nbsp; = &nbsp; 512 x 512 canvas
-                                        </span>
-                                    </span>
                                     Source Image Resize
                                 </legend>
                                 <div>
@@ -82,16 +82,16 @@
                                     </label>
                                 </div>
                             </fieldset>
+                            <span class="info">
+                                <i class="fas fa-info-circle"></i>
+                                <span class="tooltip">
+                                    Determines if smoothing is applied when resizing source images.<br><br>
+                                    On &nbsp; = &nbsp; Smoother appearance &nbsp; (antialiasing)<br>
+                                    Off &nbsp; = &nbsp; Sharper / jagged appearance
+                                </span>
+                            </span>
                             <fieldset>
                                 <legend>
-                                    <span class="info">
-                                        <i class="fas fa-info-circle"></i>
-                                        <span class="tooltip">
-                                            Determines if smoothing is applied when resizing source images.<br><br>
-                                            On &nbsp; = &nbsp; Smoother appearance &nbsp; (antialiasing)<br>
-                                            Off &nbsp; = &nbsp; Sharper / jagged appearance
-                                        </span>
-                                    </span>
                                     Resize Smoothing
                                 </legend>
                                 <div>
@@ -107,18 +107,18 @@
                                     </label>
                                 </div>
                             </fieldset>
+                            <span class="info">
+                                <i class="fas fa-info-circle"></i>
+                                <span class="tooltip">
+                                    Determines the colour mode used when creating the emblem.<br><br>
+                                    Low &nbsp; = &nbsp; Reduced colour palette &nbsp; (smaller server request
+                                    size)<br>
+                                    Full &nbsp; = &nbsp; The full colours from the source image &nbsp; (larger
+                                    server request size)
+                                </span>
+                            </span>
                             <fieldset>
                                 <legend>
-                                    <span class="info">
-                                        <i class="fas fa-info-circle"></i>
-                                        <span class="tooltip">
-                                            Determines the colour mode used when creating the emblem.<br><br>
-                                            Low &nbsp; = &nbsp; Reduced colour palette &nbsp; (smaller server request
-                                            size)<br>
-                                            Full &nbsp; = &nbsp; The full colours from the source image &nbsp; (larger
-                                            server request size)
-                                        </span>
-                                    </span>
                                     Colour Mode
                                 </legend>
                                 <div>
@@ -133,22 +133,22 @@
                                     </label>
                                 </div>
                             </fieldset>
+                            <span class="info">
+                                <i class="fas fa-info-circle"></i>
+                                <span class="tooltip">
+                                    Determines the emblem creation method. Depending on the visual elements of
+                                    the source image, either rows or columns will result in a smaller server
+                                    request size.<br><br>
+                                    Auto &nbsp; = &nbsp; Horizontal & Vertical are calculated and the smallest
+                                    is selected &nbsp; (slower)<br>
+                                    Rows &nbsp; = &nbsp; Horizontal<br>
+                                    Columns &nbsp; = &nbsp; Vertical<br><br>
+                                    The Auto option finds the best method each time but may take longer to
+                                    process larger images on some computers.
+                                </span>
+                            </span>
                             <fieldset>
                                 <legend>
-                                    <span class="info">
-                                        <i class="fas fa-info-circle"></i>
-                                        <span class="tooltip">
-                                            Determines the emblem creation method. Depending on the visual elements of
-                                            the source image, either rows or columns will result in a smaller server
-                                            request size.<br><br>
-                                            Auto &nbsp; = &nbsp; Horizontal & Vertical are calculated and the smallest
-                                            is selected &nbsp; (slower)<br>
-                                            Rows &nbsp; = &nbsp; Horizontal<br>
-                                            Columns &nbsp; = &nbsp; Vertical<br><br>
-                                            The Auto option finds the best method each time but may take longer to
-                                            process larger images on some computers.
-                                        </span>
-                                    </span>
                                     SVG Creation Method
                                 </legend>
                                 <div>
@@ -167,20 +167,20 @@
                                     </label>
                                 </div>
                             </fieldset>
+                            <span class="info">
+                                <i class="fas fa-info-circle"></i>
+                                <span class="tooltip">
+                                    Determines the amount of decimal places used for elements of the emblem
+                                    SVG.<br><br>
+                                    Low &nbsp; = &nbsp; 3 &nbsp; (recommended)<br>
+                                    Medium &nbsp; = &nbsp; 4<br>
+                                    High &nbsp; = &nbsp; 5<br><br>
+                                    Only increase this setting if there is visible tearing in the emblem (lines
+                                    present between the colours).
+                                </span>
+                            </span>
                             <fieldset>
                                 <legend>
-                                    <span class="info">
-                                        <i class="fas fa-info-circle"></i>
-                                        <span class="tooltip">
-                                            Determines the amount of decimal places used for elements of the emblem
-                                            SVG.<br><br>
-                                            Low &nbsp; = &nbsp; 3 &nbsp; (recommended)<br>
-                                            Medium &nbsp; = &nbsp; 4<br>
-                                            High &nbsp; = &nbsp; 5<br><br>
-                                            Only increase this setting if there is visible tearing in the emblem (lines
-                                            present between the colours).
-                                        </span>
-                                    </span>
                                     Decimal Precision
                                 </legend>
                                 <div>
@@ -226,19 +226,14 @@
                             <i class="fas fa-code"></i> Generate Code
                         </button>
                         <textarea id="eh-txtConsoleCode" class="textarea" readonly></textarea>
-                        <div class="div-info div-mobile">
-                            <strong>Note for mobile users:</strong><br>
-                            Some mobile devices will not be able to copy all of the code. You may need to copy it in
-                            sections.
-                        </div>
-                        <div class="div-info">
-                            <strong>Upload Note:</strong><br>
-                            The encoded emblem size should not exceed <strong>1.28 MB</strong> to ensure a smooth upload
-                            process.
-                        </div>
                         <div class="div-info">
                             <strong>Note:</strong><br>
-                            The emblem will look better in-game.
+                            The emblem's visual quality may appear enhanced in-game.
+                        </div>
+                        <div class="div-info">
+                            <strong>Disclaimer:</strong><br>
+                            This tool is intended for personal use only. The creator is not responsible for any
+                            inappropriate content uploaded to the Rockstar Games Social Club.
                         </div>
                         <button disabled id="eh-btnCopyCode" type="button" class="clr-inactive btn-wide">
                             <i class="fas fa-copy"></i> Copy Code
