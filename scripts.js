@@ -908,7 +908,7 @@ document.addEventListener("DOMContentLoaded", () => {
               numberWithCommas(EH.encodedLength) +
               " bytes out of the maximum allowed " +
               numberWithCommas(EH.maxEncodedLength) +
-              " bytes. Ready for upload!";
+              " bytes. Ready for upload! Generate the code and copy it.";
 
             // Enable the Create Code button
             setClass("eh-btnCreateCode", "btn-wide clr-primary");
@@ -921,13 +921,13 @@ document.addEventListener("DOMContentLoaded", () => {
             // Error: Emblem size exceeds the limit
             setClass("eh-divInfo", "div-info clr-danger");
             document.getElementById("eh-divInfo").innerHTML =
-              "Hold your horses! 🐎 Your emblem is a bit hefty at " +
+              "Whoa! 🛑 Your emblem is too big at " +
               numberWithCommas(EH.encodedLength) +
-              " bytes, exceeding the limit of " +
+              " bytes, over the limit of " +
               numberWithCommas(EH.maxEncodedLength) +
-              " bytes. Time to trim down some pixels!";
+              " bytes. Try reducing the size!";
             console.log(
-              "Danger: " + document.getElementById("eh-divInfo").className
+              "Warning: " + document.getElementById("eh-divInfo").className
             );
           }
         } catch (error) {
