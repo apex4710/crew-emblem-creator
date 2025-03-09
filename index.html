@@ -7,7 +7,8 @@
     <title>Crew Emblem Creator</title>
     <meta name="author" content="APEX">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
@@ -47,12 +48,12 @@
                             <span class="info">
                                 <i class="fas fa-info-circle"></i>
                                 <span class="tooltip">
-                                    Determines the resolution of the source image. The initial size will be
-                                    auto-selected when an image is loaded.<br><br>
-                                    64 &nbsp; = &nbsp; 64 x 64 canvas<br>
-                                    128 &nbsp; = &nbsp; 128 x 128 canvas<br>
-                                    256 &nbsp; = &nbsp; 256 x 256 canvas<br>
-                                    512 &nbsp; = &nbsp; 512 x 512 canvas
+                                    Specifies the resolution of the source image. The optimal size will be automatically
+                                    selected when an image is loaded.<br><br>
+                                    64 &nbsp; = &nbsp; 64 × 64 canvas<br>
+                                    128 &nbsp; = &nbsp; 128 × 128 canvas<br>
+                                    256 &nbsp; = &nbsp; 256 × 256 canvas<br>
+                                    512 &nbsp; = &nbsp; 512 × 512 canvas
                                 </span>
                             </span>
                             <fieldset>
@@ -85,9 +86,9 @@
                             <span class="info">
                                 <i class="fas fa-info-circle"></i>
                                 <span class="tooltip">
-                                    Determines if smoothing is applied when resizing source images.<br><br>
-                                    On &nbsp; = &nbsp; Smoother appearance &nbsp; (antialiasing)<br>
-                                    Off &nbsp; = &nbsp; Sharper / jagged appearance
+                                    Controls whether smoothing is applied when resizing source images.<br><br>
+                                    <strong>On:</strong> Produces a smoother appearance (antialiasing).<br>
+                                    <strong>Off:</strong> Results in a sharper, more pixelated look.
                                 </span>
                             </span>
                             <fieldset>
@@ -110,11 +111,11 @@
                             <span class="info">
                                 <i class="fas fa-info-circle"></i>
                                 <span class="tooltip">
-                                    Determines the colour mode used when creating the emblem.<br><br>
-                                    Low &nbsp; = &nbsp; Reduced colour palette &nbsp; (smaller server request
-                                    size)<br>
-                                    Full &nbsp; = &nbsp; The full colours from the source image &nbsp; (larger
-                                    server request size)
+                                    Specifies the colour mode used when generating the emblem.<br><br>
+                                    <strong>Low:</strong> Uses a reduced colour palette (smaller server request
+                                    size).<br>
+                                    <strong>Full:</strong> Retains the full colour range from the source image (larger
+                                    server request size).
                                 </span>
                             </span>
                             <fieldset>
@@ -136,15 +137,15 @@
                             <span class="info">
                                 <i class="fas fa-info-circle"></i>
                                 <span class="tooltip">
-                                    Determines the emblem creation method. Depending on the visual elements of
-                                    the source image, either rows or columns will result in a smaller server
+                                    Specifies the method used for generating the emblem. Depending on the structure of
+                                    the source image, selecting either rows or columns may result in a smaller server
                                     request size.<br><br>
-                                    Auto &nbsp; = &nbsp; Horizontal & Vertical are calculated and the smallest
-                                    is selected &nbsp; (slower)<br>
-                                    Rows &nbsp; = &nbsp; Horizontal<br>
-                                    Columns &nbsp; = &nbsp; Vertical<br><br>
-                                    The Auto option finds the best method each time but may take longer to
-                                    process larger images on some computers.
+                                    <strong>Auto:</strong> Automatically calculates both horizontal and vertical
+                                    methods, selecting the most efficient option (slower).<br>
+                                    <strong>Rows:</strong> Processes the image horizontally.<br>
+                                    <strong>Columns:</strong> Processes the image vertically.<br><br>
+                                    The Auto option optimizes the method dynamically but may take longer to process
+                                    larger images on some systems.
                                 </span>
                             </span>
                             <fieldset>
@@ -170,13 +171,13 @@
                             <span class="info">
                                 <i class="fas fa-info-circle"></i>
                                 <span class="tooltip">
-                                    Determines the amount of decimal places used for elements of the emblem
+                                    Specifies the number of decimal places used for defining elements in the emblem
                                     SVG.<br><br>
-                                    Low &nbsp; = &nbsp; 3 &nbsp; (recommended)<br>
-                                    Medium &nbsp; = &nbsp; 4<br>
-                                    High &nbsp; = &nbsp; 5<br><br>
-                                    Only increase this setting if there is visible tearing in the emblem (lines
-                                    present between the colours).
+                                    <strong>Low:</strong> 3 decimal places (recommended).<br>
+                                    <strong>Medium:</strong> 4 decimal places.<br>
+                                    <strong>High:</strong> 5 decimal places.<br><br>
+                                    Increase this setting only if you notice visible tearing in the emblem, such as gaps
+                                    or misalignment between colors.
                                 </span>
                             </span>
                             <fieldset>
