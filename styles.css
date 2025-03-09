@@ -697,7 +697,7 @@ button:disabled, button:disabled:hover {
 .div-svg-container {
   margin: 0.75rem;
   min-height: 24rem;
-  min-width: 100%;
+  min-width: 50%;
   position: relative;
   transition: all 0.3s ease;
   overflow: hidden;

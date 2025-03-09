@@ -741,7 +741,7 @@ class emblemHelper {
     let _layerData = btoa(JSON.stringify(this.layers));
     //  Create the request.
     let _consoleCode =
-      "// Generated with EmblemHelper v2.0 modified by APEX \n\n";
+      "// Generated with EmblemHelper v1.2 modified by APEX \n\n";
     _consoleCode += 'var svgData = "' + _svgData + '";\n\n';
     _consoleCode += 'var layerData = "' + _layerData + '";\n\n';
     _consoleCode +=
